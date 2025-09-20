@@ -12,7 +12,11 @@
     }
   },
   "result": {
+<<<<<<< Updated upstream
     "id": "allthemodium:allthemodium_leggings",
+=======
+    "item": "allthemodium:allthemodium_leggings",
+>>>>>>> Stashed changes
     "count": 1
   }
 }

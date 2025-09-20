@@ -15,6 +15,10 @@
     " r "
   ],
   "result": {
+<<<<<<< Updated upstream
     "id": "allthemodium:allthemodium_axe"
+=======
+    "item": "allthemodium:allthemodium_axe"
+>>>>>>> Stashed changes
   }
 }

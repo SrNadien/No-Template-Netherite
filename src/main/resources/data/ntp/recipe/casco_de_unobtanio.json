@@ -11,7 +11,11 @@
     }
   },
   "result": {
+<<<<<<< Updated upstream
     "id": "allthemodium:unobtainium_helmet",
+=======
+    "item": "allthemodium:unobtainium_helmet",
+>>>>>>> Stashed changes
     "count": 1
   }
 }

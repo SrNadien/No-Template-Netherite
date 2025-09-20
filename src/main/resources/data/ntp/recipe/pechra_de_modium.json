@@ -6,14 +6,21 @@
     "aaa",
     "aaa"
   ],
+<<<<<<< Updated upstream
   ],
+=======
+>>>>>>> Stashed changes
   "key": {
     "a": {
       "item": "allthemodium:allthemodium_ingot"
     }
   },
   "result": {
+<<<<<<< Updated upstream
     "id": "allthemodium:allthemodium_chestplate",
+=======
+    "item": "allthemodium:allthemodium_chestplate",
+>>>>>>> Stashed changes
     "count": 1
   }
 }

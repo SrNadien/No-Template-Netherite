@@ -2,5 +2,14 @@
   "workspacePanelIconSize": "TILES",
   "workspacePanelSortType": "CREATED",
   "workspacePanelSortAscending": true,
+<<<<<<< Updated upstream
   "projectBrowserSplitPos": 0
+=======
+  "projectBrowserSplitPos": 0,
+  "projectBrowserState": {
+    "expandedPaths": [
+      "[, No Netherite Template]"
+    ]
+  }
+>>>>>>> Stashed changes
 }

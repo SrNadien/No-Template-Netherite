@@ -12,7 +12,11 @@
     }
   },
   "result": {
+<<<<<<< Updated upstream
     "id": "allthemodium:unobtainium_chestplate",
+=======
+    "item": "allthemodium:unobtainium_chestplate",
+>>>>>>> Stashed changes
     "count": 1
   }
 }

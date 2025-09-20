@@ -12,7 +12,11 @@
     }
   },
   "result": {
+<<<<<<< Updated upstream
     "id": "allthemodium:vibranium_leggings",
+=======
+    "item": "allthemodium:vibranium_leggings",
+>>>>>>> Stashed changes
     "count": 1
   }
 }

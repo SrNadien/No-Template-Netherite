@@ -15,6 +15,10 @@
     " r "
   ],
   "result": {
+<<<<<<< Updated upstream
     "id": "allthemodium:unobtainium_shovel"
+=======
+    "item": "allthemodium:unobtainium_shovel"
+>>>>>>> Stashed changes
   }
 }

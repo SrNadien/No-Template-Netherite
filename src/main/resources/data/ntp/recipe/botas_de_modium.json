@@ -16,7 +16,11 @@
     }
   ],
   "result": {
+<<<<<<< Updated upstream
     "id": "allthemodium:allthemodium_boots",
+=======
+    "item": "allthemodium:allthemodium_boots",
+>>>>>>> Stashed changes
     "count": 1
   }
 }

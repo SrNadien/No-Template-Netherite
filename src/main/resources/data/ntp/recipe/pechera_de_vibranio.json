@@ -12,7 +12,11 @@
     }
   },
   "result": {
+<<<<<<< Updated upstream
     "id": "allthemodium:vibranium_chestplate",
+=======
+    "item": "allthemodium:vibranium_chestplate",
+>>>>>>> Stashed changes
     "count": 1
   }
 }

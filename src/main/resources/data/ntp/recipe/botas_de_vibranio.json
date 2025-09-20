@@ -16,7 +16,11 @@
     }
   ],
   "result": {
+<<<<<<< Updated upstream
     "id": "allthemodium:vibranium_boots",
+=======
+    "item": "allthemodium:vibranium_boots",
+>>>>>>> Stashed changes
     "count": 1
   }
 }
