@@ -1,0 +1,35 @@
+modLoader="javafml"
+loaderVersion="[4,)"
+license="MIT License"
+
+[[mods]]
+modId="ntp"
+version="10.0.0"
+displayName="No Netherite Template"
+displayURL="https://nadiende.xyz"
+logoFile="logo.png"
+credits="NadienDev"
+authors="SrNadien"
+
+# Start of user code block mod configuration
+# End of user code block mod configuration
+
+[[dependencies.ntp]]
+    modId="neoforge"
+    type="required"
+    versionRange="[21.1.65,)"
+    ordering="AFTER"
+    side="BOTH"
+
+[[dependencies.ntp]]
+    modId="minecraft"
+    type="required"
+    versionRange="[1.21.1]"
+    ordering="AFTER"
+    side="BOTH"
+
+
+
+
+# Start of user code block dependencies configuration
+# End of user code block dependencies configuration

@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group": "allthemodium",
+  "key": {
+    "a": {
+      "item": "allthemodium:unobtainium_plate"
+    },
+    "r": {
+      "item": "allthemodium:unobtainium_rod"
+    }
+  },
+  "pattern": [
+    " aa",
+    " r ",
+    " r "
+  ],
+  "result": {
+    "id": "allthemodium:unobtainium_hoe"
+  }
+}
