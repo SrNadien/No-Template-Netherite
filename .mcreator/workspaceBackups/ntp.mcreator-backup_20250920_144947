@@ -1,0 +1,521 @@
+{
+  "mod_elements": [
+    {
+      "name": "CascoNetherite",
+      "type": "recipe",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "casco_netherite",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/ntp/recipe/casco_netherite.json"
+        ]
+      },
+      "path": "~/Vanilla"
+    },
+    {
+      "name": "PecheraNetherite",
+      "type": "recipe",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "pechera_netherite",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/ntp/recipe/pechera_netherite.json"
+        ]
+      },
+      "path": "~/Vanilla"
+    },
+    {
+      "name": "PantalonesNetherite",
+      "type": "recipe",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "pantalones_netherite",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/ntp/recipe/pantalones_netherite.json"
+        ]
+      },
+      "path": "~/Vanilla"
+    },
+    {
+      "name": "BotasNetherite",
+      "type": "recipe",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "botas_netherite",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/ntp/recipe/botas_netherite.json"
+        ]
+      },
+      "path": "~/Vanilla"
+    },
+    {
+      "name": "NetheriteTemplate",
+      "type": "recipe",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "netherite_template",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/ntp/recipe/netherite_template.json"
+        ]
+      },
+      "path": "~/Vanilla"
+    },
+    {
+      "name": "CascoDeModium",
+      "type": "recipe",
+      "compiles": true,
+      "locked_code": true,
+      "registry_name": "casco_de_modium",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/ntp/recipe/casco_de_modium.json"
+        ]
+      },
+      "path": "~/Allthemodium"
+    },
+    {
+      "name": "PechraDeModium",
+      "type": "recipe",
+      "compiles": true,
+      "locked_code": true,
+      "registry_name": "pechra_de_modium",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/ntp/recipe/pechra_de_modium.json"
+        ]
+      },
+      "path": "~/Allthemodium"
+    },
+    {
+      "name": "PantalonDeModium",
+      "type": "recipe",
+      "compiles": true,
+      "locked_code": true,
+      "registry_name": "pantalon_de_modium",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/ntp/recipe/pantalon_de_modium.json"
+        ]
+      },
+      "path": "~/Allthemodium"
+    },
+    {
+      "name": "BotasDeModium",
+      "type": "recipe",
+      "compiles": true,
+      "locked_code": true,
+      "registry_name": "botas_de_modium",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/ntp/recipe/botas_de_modium.json"
+        ]
+      },
+      "path": "~/Allthemodium"
+    },
+    {
+      "name": "CascoDeVibranium",
+      "type": "recipe",
+      "compiles": true,
+      "locked_code": true,
+      "registry_name": "casco_de_vibranium",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/ntp/recipe/casco_de_vibranium.json"
+        ]
+      },
+      "path": "~/Allthemodium"
+    },
+    {
+      "name": "PecheraDeVibranio",
+      "type": "recipe",
+      "compiles": true,
+      "locked_code": true,
+      "registry_name": "pechera_de_vibranio",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/ntp/recipe/pechera_de_vibranio.json"
+        ]
+      },
+      "path": "~/Allthemodium"
+    },
+    {
+      "name": "PantalonDeVibranio",
+      "type": "recipe",
+      "compiles": true,
+      "locked_code": true,
+      "registry_name": "pantalon_de_vibranio",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/ntp/recipe/pantalon_de_vibranio.json"
+        ]
+      },
+      "path": "~/Allthemodium"
+    },
+    {
+      "name": "BotasDeVibranio",
+      "type": "recipe",
+      "compiles": true,
+      "locked_code": true,
+      "registry_name": "botas_de_vibranio",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/ntp/recipe/botas_de_vibranio.json"
+        ]
+      },
+      "path": "~/Allthemodium"
+    },
+    {
+      "name": "CascoDeUnobtanio",
+      "type": "recipe",
+      "compiles": true,
+      "locked_code": true,
+      "registry_name": "casco_de_unobtanio",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/ntp/recipe/casco_de_unobtanio.json"
+        ]
+      },
+      "path": "~/Allthemodium"
+    },
+    {
+      "name": "PecheraDeUbotanio",
+      "type": "recipe",
+      "compiles": true,
+      "locked_code": true,
+      "registry_name": "pechera_de_ubotanio",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/ntp/recipe/pechera_de_ubotanio.json"
+        ]
+      },
+      "path": "~/Allthemodium"
+    },
+    {
+      "name": "PantalonesDeUnobtanio",
+      "type": "recipe",
+      "compiles": true,
+      "locked_code": true,
+      "registry_name": "pantalones_de_unobtanio",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/ntp/recipe/pantalones_de_unobtanio.json"
+        ]
+      },
+      "path": "~/Allthemodium"
+    },
+    {
+      "name": "BotasDeUnobtanium",
+      "type": "recipe",
+      "compiles": true,
+      "locked_code": true,
+      "registry_name": "botas_de_unobtanium",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/ntp/recipe/botas_de_unobtanium.json"
+        ]
+      },
+      "path": "~/Allthemodium"
+    },
+    {
+      "name": "EspadaDeModio",
+      "type": "recipe",
+      "compiles": true,
+      "locked_code": true,
+      "registry_name": "espada_de_modio",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/ntp/recipe/espada_de_modio.json"
+        ]
+      },
+      "path": "~/Allthemodium"
+    },
+    {
+      "name": "HachaDeModio",
+      "type": "recipe",
+      "compiles": true,
+      "locked_code": true,
+      "registry_name": "hacha_de_modio",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/ntp/recipe/hacha_de_modio.json"
+        ]
+      },
+      "path": "~/Allthemodium"
+    },
+    {
+      "name": "PicoDeModio",
+      "type": "recipe",
+      "compiles": true,
+      "locked_code": true,
+      "registry_name": "pico_de_modio",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/ntp/recipe/pico_de_modio.json"
+        ]
+      },
+      "path": "~/Allthemodium"
+    },
+    {
+      "name": "PalDeModio",
+      "type": "recipe",
+      "compiles": true,
+      "locked_code": true,
+      "registry_name": "pal_de_modio",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/ntp/recipe/pal_de_modio.json"
+        ]
+      },
+      "path": "~/Allthemodium"
+    },
+    {
+      "name": "AzadaDeModio",
+      "type": "recipe",
+      "compiles": true,
+      "locked_code": true,
+      "registry_name": "azada_de_modio",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/ntp/recipe/azada_de_modio.json"
+        ]
+      },
+      "path": "~/Allthemodium"
+    },
+    {
+      "name": "EspadaDeVibranio",
+      "type": "recipe",
+      "compiles": true,
+      "locked_code": true,
+      "registry_name": "espada_de_vibranio",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/ntp/recipe/espada_de_vibranio.json"
+        ]
+      },
+      "path": "~/Allthemodium"
+    },
+    {
+      "name": "HachaDeVibranio",
+      "type": "recipe",
+      "compiles": true,
+      "locked_code": true,
+      "registry_name": "hacha_de_vibranio",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/ntp/recipe/hacha_de_vibranio.json"
+        ]
+      },
+      "path": "~/Allthemodium"
+    },
+    {
+      "name": "PicoDeVibranio",
+      "type": "recipe",
+      "compiles": true,
+      "locked_code": true,
+      "registry_name": "pico_de_vibranio",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/ntp/recipe/pico_de_vibranio.json"
+        ]
+      },
+      "path": "~/Allthemodium"
+    },
+    {
+      "name": "PalaDeVibranio",
+      "type": "recipe",
+      "compiles": true,
+      "locked_code": true,
+      "registry_name": "pala_de_vibranio",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/ntp/recipe/pala_de_vibranio.json"
+        ]
+      },
+      "path": "~/Allthemodium"
+    },
+    {
+      "name": "AzadaDeVibranio",
+      "type": "recipe",
+      "compiles": true,
+      "locked_code": true,
+      "registry_name": "azada_de_vibranio",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/ntp/recipe/azada_de_vibranio.json"
+        ]
+      },
+      "path": "~/Allthemodium"
+    },
+    {
+      "name": "EspadaDeUnobtanio",
+      "type": "recipe",
+      "compiles": true,
+      "locked_code": true,
+      "registry_name": "espada_de_unobtanio",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/ntp/recipe/espada_de_unobtanio.json"
+        ]
+      },
+      "path": "~/Allthemodium"
+    },
+    {
+      "name": "HachaDeUnobtanio",
+      "type": "recipe",
+      "compiles": true,
+      "locked_code": true,
+      "registry_name": "hacha_de_unobtanio",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/ntp/recipe/hacha_de_unobtanio.json"
+        ]
+      },
+      "path": "~/Allthemodium"
+    },
+    {
+      "name": "PalaDeUnobtanio",
+      "type": "recipe",
+      "compiles": true,
+      "locked_code": true,
+      "registry_name": "pala_de_unobtanio",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/ntp/recipe/pala_de_unobtanio.json"
+        ]
+      },
+      "path": "~/Allthemodium"
+    },
+    {
+      "name": "AzadaDeUnobtanio",
+      "type": "recipe",
+      "compiles": true,
+      "locked_code": true,
+      "registry_name": "azada_de_unobtanio",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/ntp/recipe/azada_de_unobtanio.json"
+        ]
+      },
+      "path": "~/Allthemodium"
+    },
+    {
+      "name": "EspadaDeNetherite",
+      "type": "recipe",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "espada_de_netherite",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/ntp/recipe/espada_de_netherite.json"
+        ]
+      },
+      "path": "~/Vanilla"
+    },
+    {
+      "name": "HachaDeNetherite",
+      "type": "recipe",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "hacha_de_netherite",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/ntp/recipe/hacha_de_netherite.json"
+        ]
+      },
+      "path": "~/Vanilla"
+    },
+    {
+      "name": "PicoDeNetherite",
+      "type": "recipe",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "pico_de_netherite",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/ntp/recipe/pico_de_netherite.json"
+        ]
+      },
+      "path": "~/Vanilla"
+    },
+    {
+      "name": "PalaDenetherite",
+      "type": "recipe",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "pala_denetherite",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/ntp/recipe/pala_denetherite.json"
+        ]
+      },
+      "path": "~/Vanilla"
+    },
+    {
+      "name": "AzadaDeNetherite",
+      "type": "recipe",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "azada_de_netherite",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/ntp/recipe/azada_de_netherite.json"
+        ]
+      },
+      "path": "~/Vanilla"
+    },
+    {
+      "name": "LigoteDeNetherite",
+      "type": "recipe",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "ligote_de_netherite",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/ntp/recipe/ligote_de_netherite.json"
+        ]
+      },
+      "path": "~/Vanilla"
+    }
+  ],
+  "variable_elements": [],
+  "sound_elements": [],
+  "tag_elements": {},
+  "tab_element_order": {},
+  "language_map": {
+    "en_us": {}
+  },
+  "foldersRoot": {
+    "name": "~",
+    "children": [
+      {
+        "name": "Vanilla",
+        "children": []
+      },
+      {
+        "name": "Allthemodium",
+        "children": []
+      }
+    ]
+  },
+  "workspaceSettings": {
+    "modid": "ntp",
+    "modName": "No Netherite Template",
+    "version": "1.0.0",
+    "author": "SrNadien, MCreator",
+    "websiteURL": "https://mcreator.net",
+    "license": "Not specified",
+    "serverSideOnly": false,
+    "requiredMods": [],
+    "dependencies": [],
+    "dependants": [],
+    "mcreatorDependencies": [],
+    "currentGenerator": "neoforge-1.21.1",
+    "modElementsPackage": "net.nadiendev.ntp"
+  },
+  "mcreatorVersion": 202400452410
+}

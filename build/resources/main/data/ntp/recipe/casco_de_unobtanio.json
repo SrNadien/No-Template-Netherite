@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "aaa",
+    "a a"
+  ],
+  "key": {
+    "a": {
+      "item": "allthemodium:unobtainium_ingot"
+    }
+  },
+  "result": {
+    "id": "allthemodium:unobtainium_helmet",
+    "count": 1
+  }
+}
