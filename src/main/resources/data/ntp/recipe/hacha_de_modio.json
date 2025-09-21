@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group": "allthemodium",
+  "key": {
+    "a": {
+      "item": "allthemodium:allthemodium_plate"
+    },
+    "r": {
+      "item": "allthemodium:allthemodium_rod"
+    }
+  },
+  "pattern": [
+    " aa",
+    " ra",
+    " r "
+  ],
+  "result": {
+    "id": "allthemodium:allthemodium_axe"
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "aba",
+    "aca",
+    "aaa"
+  ],
+  "key": {
+    "a": "minecraft:obsidian",
+    "b": "minecraft:diamond",
+    "c": "minecraft:ender_eye"
+  },
+  "result": {
+    "id": "minecraft:netherite_upgrade_smithing_template",
+    "count": 1
+  }
+}

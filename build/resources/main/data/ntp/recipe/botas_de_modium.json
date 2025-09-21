@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "allthemodium:allthemodium_ingot"
+    },
+    {
+      "item": "allthemodium:allthemodium_ingot"
+    },
+    {
+      "item": "allthemodium:allthemodium_ingot"
+    },
+    {
+      "item": "allthemodium:allthemodium_ingot"
+    }
+  ],
+  "result": {
+    "id": "allthemodium:allthemodium_boots",
+    "count": 1
+  }
+}

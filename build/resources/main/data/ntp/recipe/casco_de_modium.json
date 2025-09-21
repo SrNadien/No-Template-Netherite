@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "aaa",
+    "a a"
+  ],
+  "key": {
+    "a": {
+      "item": "allthemodium:allthemodium_ingot"
+    }
+  },
+  "result": {
+    "id": "allthemodium:allthemodium_helmet",
+    "count": 1
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "allthemodium:vibranium_ingot"
+    },
+    {
+      "item": "allthemodium:vibranium_ingot"
+    },
+    {
+      "item": "allthemodium:vibranium_ingot"
+    },
+    {
+      "item": "allthemodium:vibranium_ingot"
+    }
+  ],
+  "result": {
+    "id": "allthemodium:vibranium_boots",
+    "count": 1
+  }
+}

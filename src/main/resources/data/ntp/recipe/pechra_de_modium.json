@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "a a",
+    "aaa",
+    "aaa"
+  ],
+  ],
+  "key": {
+    "a": {
+      "item": "allthemodium:allthemodium_ingot"
+    }
+  },
+  "result": {
+    "id": "allthemodium:allthemodium_chestplate",
+    "count": 1
+  }
+}
