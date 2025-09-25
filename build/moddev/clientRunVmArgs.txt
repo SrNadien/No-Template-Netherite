@@ -10,9 +10,15 @@ java.base/java.lang.invoke=cpw.mods.securejarhandler
 java.base/sun.security.util=cpw.mods.securejarhandler
 --add-exports
 jdk.naming.dns/com.sun.jndi.dns=java.naming
+<<<<<<< Updated upstream
 -Dlog4j2.configurationFile=C:\\Users\\SrNadien\\MCreatorWorkspaces\\ntp\\build\\moddev\\clientLog4j2.xml
 -Dneoforge.enableGameTest=true
 -DlegacyClassPath.file=C:\\Users\\SrNadien\\MCreatorWorkspaces\\ntp\\build\\moddev\\clientLegacyClasspath.txt
+=======
+"-Dlog4j2.configurationFile=E:\\modsmios\\No Netherite Template\\v10 1.21.1\\builds\\v10 1.21.1\\build\\moddev\\clientLog4j2.xml"
+-Dneoforge.enableGameTest=true
+"-DlegacyClassPath.file=E:\\modsmios\\No Netherite Template\\v10 1.21.1\\builds\\v10 1.21.1\\build\\moddev\\clientLegacyClasspath.txt"
+>>>>>>> Stashed changes
 -DignoreList=securejarhandler-3.0.8.jar,asm-9.7.jar,asm-commons-9.7.jar,asm-tree-9.7.jar,asm-util-9.7.jar,asm-analysis-9.7.jar,bootstraplauncher-2.0.2.jar,JarJarFileSystems-0.4.1.jar,mixinextras-neoforge-0.4.1.jar,client-extra,neoforge-
 -Dfml.gameLayerLibraries=
 -DmergeModules=jna-5.10.0.jar,jna-platform-5.10.0.jar

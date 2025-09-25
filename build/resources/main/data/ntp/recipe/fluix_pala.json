@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "a",
+    "b",
+    "b"
+  ],
+  "key": {
+    "a": {
+      "item": "ae2:fluix_crystal"
+    },
+    "b": {
+      "item": "item": "minecraft:stick"
+    }
+  },
+  "result": {
+    "id": "ae2:fluix_shovel",
+    "count": 1
+  }
+}

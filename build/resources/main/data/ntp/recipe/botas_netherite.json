@@ -1,6 +1,7 @@
 {
-  "type": "minecraft:crafting_shapeless",
+  "type": "minecraft:crafting_shaped",
   "category": "misc",
+<<<<<<< Updated upstream
   "ingredients": [
     {
       "item": "minecraft:netherite_ingot"
@@ -14,7 +15,17 @@
     {
       "item": "minecraft:netherite_ingot"
     }
+=======
+  "pattern": [
+    "a a",
+    "a a"
+>>>>>>> Stashed changes
   ],
+  "key": {
+    "a": {
+      "item": "minecraft:netherite_ingot"
+    }
+  },
   "result": {
     "id": "minecraft:netherite_boots",
     "count": 1

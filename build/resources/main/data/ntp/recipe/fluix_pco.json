@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "aaa",
+    " b ",
+    " b "
+  ],
+  "key": {
+    "a": {
+      "item": "ae2:fluix_crystal"
+    },
+    "b": {
+      "item": "item": "minecraft:stick"
+    }
+  },
+  "result": {
+    "id": "ae2:fluix_pickaxe",
+    "count": 1
+  }
+}

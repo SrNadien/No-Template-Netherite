@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "aa",
+    "ba",
+    "b "
+  ],
+  "key": {
+    "a": {
+      "item": "minecraft:suspicious_sand"
+    },
+    "b": {
+      "item": "minecraft:waxed_weathered_cut_copper_slab"
+    }
+  },
+  "result": {
+    "id": "minecraft:stripped_cherry_log",
+    "count": 1
+  }
+}

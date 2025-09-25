@@ -1,20 +1,15 @@
-{
-  "type": "minecraft:crafting_shapeless",
+{{
+  "type": "minecraft:crafting_shaped",
   "category": "misc",
-  "ingredients": [
-    {
-      "item": "allthemodium:unobtainium_ingot"
-    },
-    {
-      "item": "allthemodium:unobtainium_ingot"
-    },
-    {
-      "item": "allthemodium:unobtainium_ingot"
-    },
-    {
+  "pattern": [
+    "a a",
+    "a a"
+  ],
+  "key": {
+    "a": {
       "item": "allthemodium:unobtainium_ingot"
     }
-  ],
+  },
   "result": {
     "id": "allthemodium:unobtainium_boots",
     "count": 1

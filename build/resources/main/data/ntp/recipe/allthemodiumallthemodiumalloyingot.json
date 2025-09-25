@@ -1,0 +1,15 @@
+{
+  "type": "productivemetalworks:item_casting",
+  "cast": {
+    "item": "productivemetalworks:ingot_cast"
+  },
+  "consume_cast": false,
+  "fluid": {
+    "amount": 250,
+    "fluid": "allthemodium:molten_vibunob"
+  },
+  "result": {
+    "count": 1,
+    "id": "allthemodium:unobtainium_vibranium_alloy_ingot"
+  }
+}

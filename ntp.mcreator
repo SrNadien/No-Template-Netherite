@@ -480,6 +480,149 @@
         ]
       },
       "path": "~/Vanilla"
+    },
+    {
+      "name": "PicoDeUnobtanio",
+      "type": "recipe",
+      "compiles": true,
+      "locked_code": true,
+      "registry_name": "pico_de_unobtanio",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/ntp/recipe/pico_de_unobtanio.json"
+        ]
+      },
+      "path": "~/Allthemodium"
+    },
+    {
+      "name": "BotasDeNetherite2",
+      "type": "recipe",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "botas_de_netherite_2",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/ntp/recipe/botas_de_netherite_2.json"
+        ]
+      },
+      "path": "~/Vanilla"
+    },
+    {
+      "name": "BotasDeModium2",
+      "type": "recipe",
+      "compiles": true,
+      "locked_code": true,
+      "registry_name": "botas_de_modium_2",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/ntp/recipe/botas_de_modium_2.json"
+        ]
+      },
+      "path": "~/Allthemodium"
+    },
+    {
+      "name": "BotasDeVibranio2",
+      "type": "recipe",
+      "compiles": true,
+      "locked_code": true,
+      "registry_name": "botas_de_vibranio_2",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/ntp/recipe/botas_de_vibranio_2.json"
+        ]
+      },
+      "path": "~/Allthemodium"
+    },
+    {
+      "name": "BotasDeUnobtanio2",
+      "type": "recipe",
+      "compiles": true,
+      "locked_code": true,
+      "registry_name": "botas_de_unobtanio_2",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/ntp/recipe/botas_de_unobtanio_2.json"
+        ]
+      },
+      "path": "~/Allthemodium"
+    },
+    {
+      "name": "Moltenatmunob",
+      "type": "recipe",
+      "compiles": true,
+      "locked_code": true,
+      "registry_name": "moltenatmunob",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/ntp/recipe/moltenatmunob.json"
+        ]
+      },
+      "path": "~/Allthemodium"
+    },
+    {
+      "name": "Moltenatmvib",
+      "type": "recipe",
+      "compiles": true,
+      "locked_code": true,
+      "registry_name": "moltenatmvib",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/ntp/recipe/moltenatmvib.json"
+        ]
+      },
+      "path": "~/Allthemodium"
+    },
+    {
+      "name": "Moltenvibunob",
+      "type": "recipe",
+      "compiles": true,
+      "locked_code": true,
+      "registry_name": "moltenvibunob",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/ntp/recipe/moltenvibunob.json"
+        ]
+      },
+      "path": "~/Allthemodium"
+    },
+    {
+      "name": "Unobtainiumvibraniumalloyingot",
+      "type": "recipe",
+      "compiles": true,
+      "locked_code": true,
+      "registry_name": "unobtainiumvibraniumalloyingot",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/ntp/recipe/unobtainiumvibraniumalloyingot.json"
+        ]
+      },
+      "path": "~/Allthemodium"
+    },
+    {
+      "name": "Vibraniumallthemodiumalloyingo",
+      "type": "recipe",
+      "compiles": true,
+      "locked_code": true,
+      "registry_name": "vibraniumallthemodiumalloyingo",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/ntp/recipe/vibraniumallthemodiumalloyingo.json"
+        ]
+      },
+      "path": "~/Allthemodium"
+    },
+    {
+      "name": "Allthemodiumallthemodiumalloyingot",
+      "type": "recipe",
+      "compiles": true,
+      "locked_code": true,
+      "registry_name": "allthemodiumallthemodiumalloyingot",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/ntp/recipe/allthemodiumallthemodiumalloyingot.json"
+        ]
+      },
+      "path": "~/Allthemodium"
     }
   ],
   "variable_elements": [],
@@ -499,13 +642,21 @@
       {
         "name": "Allthemodium",
         "children": []
+      },
+      {
+        "name": "Applied Energistics 2",
+        "children": []
       }
     ]
   },
   "workspaceSettings": {
     "modid": "ntp",
     "modName": "No Netherite Template",
+<<<<<<< Updated upstream
     "version": "10.0.0",
+=======
+    "version": "10.1",
+>>>>>>> Stashed changes
     "author": "SrNadien",
     "websiteURL": "https://nadiende.xyz",
     "license": "MIT License",

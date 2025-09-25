@@ -4,7 +4,11 @@ license="MIT License"
 
 [[mods]]
 modId="ntp"
+<<<<<<< Updated upstream
 version="10.0.0"
+=======
+version="10.1"
+>>>>>>> Stashed changes
 displayName="No Netherite Template"
 displayURL="https://nadiende.xyz"
 logoFile="logo.png"
