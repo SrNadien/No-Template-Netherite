@@ -4,11 +4,7 @@ license="MIT License"
 
 [[mods]]
 modId="ntp"
-<<<<<<< Updated upstream
-version="10.0.0"
-=======
-version="10.1"
->>>>>>> Stashed changes
+version="10.1.1"
 displayName="No Netherite Template"
 displayURL="https://nadiende.xyz"
 logoFile="logo.png"
@@ -18,10 +14,14 @@ authors="SrNadien"
 # Start of user code block mod configuration
 # End of user code block mod configuration
 
+
+# Start of user code block custom mixins
+# End of user code block custom mixins
+
 [[dependencies.ntp]]
     modId="neoforge"
     type="required"
-    versionRange="[21.1.65,)"
+    versionRange="[21.1.176,)"
     ordering="AFTER"
     side="BOTH"
 
