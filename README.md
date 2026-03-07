@@ -8,6 +8,12 @@ This mod addresses the issue introduced in Minecraft 1.20.x and 1.21.x where the
 
 
 Versions
+__________________________
+v15 1.21.11
+
+v14 ???
+
+v13 ???
 
 v12 1.21.8
 
@@ -16,16 +22,9 @@ v11 1.21.5
 v10 1.21.1
 
 v9.0 1.20.1
-
+__________________________
 Mods Supported:
 
-
-AllTheModium
-
-Future Supports:
-
-Applied Energistics 2
-Forbidden And Arcanus 
-Advanced Netherite
+?????
 Ex Deorum       
 [![](https://media.forgecdn.net/attachments/description/1274257/description_3dac1d50-10d8-4fb7-b07e-daac5b5218ad.png)](https://clankyhosting.com/cart.php?a=view&promocode=srnadien)
