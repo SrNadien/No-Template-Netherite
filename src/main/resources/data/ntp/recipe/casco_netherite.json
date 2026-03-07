@@ -6,9 +6,7 @@
     "a a"
   ],
   "key": {
-    "a": {
-      "item": "minecraft:netherite_ingot"
-    }
+    "a": "minecraft:netherite_ingot"
   },
   "result": {
     "id": "minecraft:netherite_helmet",

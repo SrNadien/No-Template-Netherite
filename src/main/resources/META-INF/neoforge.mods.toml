@@ -24,6 +24,7 @@ authors="SrNadien"
 [[dependencies.ntp]]
     modId="minecraft"
     type="required"
+<<<<<<< Updated upstream
     versionRange="[1.21.1]"
     ordering="AFTER"
     side="BOTH"
@@ -33,3 +34,15 @@ authors="SrNadien"
 
 # Start of user code block dependencies configuration
 # End of user code block dependencies configuration
+=======
+    versionRange="${minecraft_version_range}"
+    ordering="NONE"
+    side="BOTH"
+
+[[dependencies.${mod_id}]]
+    modId="jei"
+    type="required"
+    versionRange="${jei_version}"
+    ordering="NONE"
+    side="BOTH"
+>>>>>>> Stashed changes

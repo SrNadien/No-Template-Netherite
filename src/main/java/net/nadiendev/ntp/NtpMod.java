@@ -17,6 +17,11 @@ import net.minecraft.util.Tuple;
 import net.minecraft.network.protocol.common.custom.CustomPacketPayload;
 import net.minecraft.network.codec.StreamCodec;
 import net.minecraft.network.FriendlyByteBuf;
+<<<<<<< Updated upstream:src/main/java/net/nadiendev/ntp/NtpMod.java
+=======
+
+import nadiendev.ntp.datagen.DataGenerators;
+>>>>>>> Stashed changes:src/main/java/nadiendev/ntp/NoNetheriteTemplate.java
 
 import java.util.concurrent.ConcurrentLinkedQueue;
 import java.util.Map;
@@ -30,6 +35,7 @@ public class NtpMod {
 	public static final Logger LOGGER = LogManager.getLogger(NtpMod.class);
 	public static final String MODID = "ntp";
 
+<<<<<<< Updated upstream:src/main/java/net/nadiendev/ntp/NtpMod.java
 	public NtpMod(IEventBus modEventBus) {
 		// Start of user code block mod constructor
 		// End of user code block mod constructor
@@ -49,6 +55,38 @@ public class NtpMod {
 	}
 
 	public static <T extends CustomPacketPayload> void addNetworkMessage(CustomPacketPayload.Type<T> id, StreamCodec<? extends FriendlyByteBuf, T> reader, IPayloadHandler<T> handler) {
+=======
+	public NoNetheriteTemplate(IEventBus modEventBus) {
+		LOGGER.info("Initializing No Netherite Template");
+		LOGGER.info("Recipes will be registered via Data Generation");
+
+		NeoForge.EVENT_BUS.register(this);
+
+		modEventBus.addListener(this::registerNetworking);
+		modEventBus.addListener(DataGenerators::gatherData);
+
+		LOGGER.info("No Netherite Template initialized successfully");
+	}
+
+
+	// ============================================
+	// NETWORKING
+	// ============================================
+
+	private static boolean networkingRegistered = false;
+	private static final Map<CustomPacketPayload.Type<?>, NetworkMessage<?>> MESSAGES = new HashMap<>();
+
+	private record NetworkMessage<T extends CustomPacketPayload>(
+		StreamCodec<? extends FriendlyByteBuf, T> reader,
+		IPayloadHandler<T> handler
+	) {}
+
+	public static <T extends CustomPacketPayload> void addNetworkMessage(
+		CustomPacketPayload.Type<T> id,
+		StreamCodec<? extends FriendlyByteBuf, T> reader,
+		IPayloadHandler<T> handler
+	) {
+>>>>>>> Stashed changes:src/main/java/nadiendev/ntp/NoNetheriteTemplate.java
 		if (networkingRegistered)
 			throw new IllegalStateException("Cannot register new network messages after networking has been registered");
 		MESSAGES.put(id, new NetworkMessage<>(reader, handler));
@@ -57,10 +95,27 @@ public class NtpMod {
 	@SuppressWarnings({"rawtypes", "unchecked"})
 	private void registerNetworking(final RegisterPayloadHandlersEvent event) {
 		final PayloadRegistrar registrar = event.registrar(MODID);
+<<<<<<< Updated upstream:src/main/java/net/nadiendev/ntp/NtpMod.java
 		MESSAGES.forEach((id, networkMessage) -> registrar.playBidirectional(id, ((NetworkMessage) networkMessage).reader(), ((NetworkMessage) networkMessage).handler()));
 		networkingRegistered = true;
 	}
 
+=======
+		MESSAGES.forEach((id, networkMessage) ->
+			registrar.playBidirectional(
+				id,
+				((NetworkMessage) networkMessage).reader(),
+				((NetworkMessage) networkMessage).handler()
+			)
+		);
+		networkingRegistered = true;
+	}
+
+	// ============================================
+	// SERVER TICK
+	// ============================================
+
+>>>>>>> Stashed changes:src/main/java/nadiendev/ntp/NoNetheriteTemplate.java
 	private static final Collection<Tuple<Runnable, Integer>> workQueue = new ConcurrentLinkedQueue<>();
 
 	public static void queueServerWork(int tick, Runnable action) {

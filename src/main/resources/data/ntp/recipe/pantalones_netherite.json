@@ -1,6 +1,13 @@
 {
   "type": "minecraft:crafting_shaped",
+<<<<<<< Updated upstream:src/main/resources/data/ntp/recipe/pantalones_netherite.json
   "category": "misc",
+=======
+  "category": "equipment",
+  "key": {
+    "a": "minecraft:netherite_ingot"
+  },
+>>>>>>> Stashed changes:src/generated/resources/data/ntp/recipe/netherite_leggings.json
   "pattern": [
     "aaa",
     "a a",

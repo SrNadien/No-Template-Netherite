@@ -1,6 +1,13 @@
 {
   "type": "minecraft:crafting_shaped",
+<<<<<<< Updated upstream:src/main/resources/data/ntp/recipe/pechera_netherite.json
   "category": "misc",
+=======
+  "category": "equipment",
+  "key": {
+    "a": "minecraft:netherite_ingot"
+  },
+>>>>>>> Stashed changes:src/generated/resources/data/ntp/recipe/netherite_chestplate.json
   "pattern": [
     "a a",
     "aaa",
