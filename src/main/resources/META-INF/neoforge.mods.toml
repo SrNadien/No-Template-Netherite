@@ -1,39 +1,31 @@
 modLoader="javafml"
-loaderVersion="[4,)"
-license="MIT License"
+loaderVersion="${loader_version_range}"
+license="${mod_license}"
+issueTrackerURL="${issue_tracker}"
 
 [[mods]]
-modId="ntp"
-version="10.1.1"
-displayName="No Netherite Template"
-displayURL="https://nadiende.xyz"
+modId="${mod_id}"
+version="${mod_version}"
+displayName="${mod_name}"
+displayURL=""
 logoFile="logo.png"
-credits="NadienDev"
-authors="SrNadien"
+credits="${authors}"
+authors="${authors}"
+description='''
+With this mod, you can restore and re-add missing or removed Minecraft crafting recipes.
+Con Este Mod Puedes tener recetas Faltentes O Eliminadas De Minecraft
+'''
 
-# Start of user code block mod configuration
-# End of user code block mod configuration
-
-
-# Start of user code block custom mixins
-# End of user code block custom mixins
-
-[[dependencies.ntp]]
+[[dependencies.${mod_id}]]
     modId="neoforge"
     type="required"
-    versionRange="[21.1.176,)"
-    ordering="AFTER"
+    versionRange="[${neo_version},)"
+    ordering="NONE"
     side="BOTH"
 
-[[dependencies.ntp]]
+[[dependencies.${mod_id}]]
     modId="minecraft"
     type="required"
-    versionRange="[1.21.1]"
-    ordering="AFTER"
+    versionRange="${minecraft_version_range}"
+    ordering="NONE"
     side="BOTH"
-
-
-
-
-# Start of user code block dependencies configuration
-# End of user code block dependencies configuration
