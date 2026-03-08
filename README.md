@@ -4,13 +4,23 @@ Versions
 __________________________
 v15 1.21.11
 
-v14 ???
+v14 1.21.9
 
-v13 ???
+v13 1.21.10
 
 v12 1.21.8
 
+V12 1-21-7
+
+v12 1-21-6
+
 v11 1.21.5
+
+v11 1.21.4
+
+v10 1.21.3
+
+v10 1.21.2
 
 v10 1.21.1
 
@@ -19,5 +29,3 @@ __________________________
 Mods Supported:
 
 ?????
-Ex Deorum       
-[![](https://media.forgecdn.net/attachments/description/1274257/description_3dac1d50-10d8-4fb7-b07e-daac5b5218ad.png)](https://clankyhosting.com/cart.php?a=view&promocode=srnadien)
