@@ -18,14 +18,10 @@ import net.minecraft.util.Tuple;
 import net.minecraft.network.protocol.common.custom.CustomPacketPayload;
 import net.minecraft.network.codec.StreamCodec;
 import net.minecraft.network.FriendlyByteBuf;
-import net.minecraft.data.DataGenerator;
-import net.minecraft.data.PackOutput;
-import net.minecraft.core.HolderLookup;
 
-import nadiendev.ntp.datagen.ModRecipeProvider;
+import nadiendev.ntp.datagen.DataGenerators;
 
 import java.util.concurrent.ConcurrentLinkedQueue;
-import java.util.concurrent.CompletableFuture;
 import java.util.Map;
 import java.util.List;
 import java.util.HashMap;
@@ -40,45 +36,31 @@ public class NoNetheriteTemplate {
 	public NoNetheriteTemplate(IEventBus modEventBus) {
 		LOGGER.info("Initializing No Netherite Template");
 		LOGGER.info("Recipes will be registered via Data Generation");
-		
+
 		NeoForge.EVENT_BUS.register(this);
-		
-		// Registrar el listener para networking
+
 		modEventBus.addListener(this::registerNetworking);
-		
-		// Registrar el listener para data generation
-		modEventBus.addListener(this::gatherData);
-		
+		modEventBus.addListener(DataGenerators::gatherData);
+
 		LOGGER.info("No Netherite Template initialized successfully");
 	}
 
-	
-	public void gatherData(GatherDataEvent event) {
-		DataGenerator generator = event.getGenerator();
-		PackOutput output = generator.getPackOutput();
-		CompletableFuture<HolderLookup.Provider> lookupProvider = event.getLookupProvider();
-		net.neoforged.neoforge.common.data.ExistingFileHelper existingFileHelper = event.getExistingFileHelper();
-
-		// Registrar el proveedor de recetas
-		generator.addProvider(event.includeServer(), new ModRecipeProvider(output, lookupProvider));	
-		LOGGER.info("Data generators registered successfully");
-	}
 
 	// ============================================
-	// NETWORKING (código original)
+	// NETWORKING
 	// ============================================
-	
+
 	private static boolean networkingRegistered = false;
 	private static final Map<CustomPacketPayload.Type<?>, NetworkMessage<?>> MESSAGES = new HashMap<>();
 
 	private record NetworkMessage<T extends CustomPacketPayload>(
-		StreamCodec<? extends FriendlyByteBuf, T> reader, 
+		StreamCodec<? extends FriendlyByteBuf, T> reader,
 		IPayloadHandler<T> handler
 	) {}
 
 	public static <T extends CustomPacketPayload> void addNetworkMessage(
-		CustomPacketPayload.Type<T> id, 
-		StreamCodec<? extends FriendlyByteBuf, T> reader, 
+		CustomPacketPayload.Type<T> id,
+		StreamCodec<? extends FriendlyByteBuf, T> reader,
 		IPayloadHandler<T> handler
 	) {
 		if (networkingRegistered)
@@ -89,10 +71,10 @@ public class NoNetheriteTemplate {
 	@SuppressWarnings({"rawtypes", "unchecked"})
 	private void registerNetworking(final RegisterPayloadHandlersEvent event) {
 		final PayloadRegistrar registrar = event.registrar(MODID);
-		MESSAGES.forEach((id, networkMessage) -> 
+		MESSAGES.forEach((id, networkMessage) ->
 			registrar.playBidirectional(
-				id, 
-				((NetworkMessage) networkMessage).reader(), 
+				id,
+				((NetworkMessage) networkMessage).reader(),
 				((NetworkMessage) networkMessage).handler()
 			)
 		);
@@ -100,9 +82,9 @@ public class NoNetheriteTemplate {
 	}
 
 	// ============================================
-	// SERVER TICK (código original)
+	// SERVER TICK
 	// ============================================
-	
+
 	private static final Collection<Tuple<Runnable, Integer>> workQueue = new ConcurrentLinkedQueue<>();
 
 	public static void queueServerWork(int tick, Runnable action) {
