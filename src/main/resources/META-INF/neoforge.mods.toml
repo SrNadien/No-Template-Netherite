@@ -27,9 +27,3 @@ description='''This mod removes the Netherite Upgrade Template from the Smithing
     ordering="NONE"
     side="BOTH"
 
-[[dependencies.${mod_id}]]
-    modId="jei"
-    type="optional"
-    versionRange="${jei_version}"
-    ordering="NONE"
-    side="BOTH"
