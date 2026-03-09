@@ -11,10 +11,7 @@ displayURL=""
 logoFile="logo.png"
 credits="${authors}"
 authors="${authors}"
-description='''
-With this mod, you can restore and re-add missing or removed Minecraft crafting recipes.
-Con Este Mod Puedes tener recetas Faltentes O Eliminadas De Minecraft
-'''
+description='''This mod removes the Netherite Upgrade Template from the Smithing Table in Minecraft, allowing players to upgrade diamond gear to Netherite without needing the template, simplifying the process of obtaining Netherite gear.'''
 
 [[dependencies.${mod_id}]]
     modId="neoforge"
@@ -32,7 +29,7 @@ Con Este Mod Puedes tener recetas Faltentes O Eliminadas De Minecraft
 
 [[dependencies.${mod_id}]]
     modId="jei"
-    type="required"
+    type="optional"
     versionRange="${jei_version}"
     ordering="NONE"
     side="BOTH"
