@@ -25,9 +25,6 @@ description='''This mod removes the Netherite Upgrade Template from the Smithing
     type="required"
     versionRange="${minecraft_version_range}"
     ordering="NONE"
-<<<<<<< HEAD
-<<<<<<< Updated upstream
-=======
     side="BOTH"
 
 [[dependencies.${mod_id}]]
@@ -64,8 +61,5 @@ description='''This mod removes the Netherite Upgrade Template from the Smithing
     type="optional"
     versionRange="${mekanism_version}"
     ordering="NONE"
->>>>>>> Stashed changes
     side="BOTH"
-=======
     side="BOTH"
->>>>>>> 995d4ddc74507d72685ce2704fe3bd357fcbf646
