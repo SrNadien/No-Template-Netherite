@@ -1,75 +1,18 @@
 plugins {
     id 'java-library'
     id 'maven-publish'
-<<<<<<< Updated upstream
-    id 'net.neoforged.moddev' version '2.0.137'
-    id 'idea'
-}
-
-tasks.named('wrapper', Wrapper).configure {
-    distributionType = Wrapper.DistributionType.BIN
-}
-
-version = minecraft_version + "-" + mod_version + "-" + tag_lanzador
-=======
     id 'net.minecraftforge.gradle' version '[6.0,6.2)'
     id 'org.parchmentmc.librarian.forgegradle' version '1.+'
     id 'idea'
 }
 
 version = "${minecraft_version}-${mod_version}-${tag_lanzador}"
->>>>>>> Stashed changes
 group = mod_group_id
 
 base {
     archivesName = mod_name
 }
 
-<<<<<<< Updated upstream
-
-
-java.toolchain.languageVersion = JavaLanguageVersion.of(21)
-
-neoForge {
-    version = project.neo_version
-
-    parchment {
-        mappingsVersion = project.parchment_mappings_version
-        minecraftVersion = project.parchment_minecraft_version
-    }
-
-    runs {
-        client {
-            client()
-            systemProperty 'neoforge.enabledGameTestNamespaces', project.mod_id
-        }
-
-        server {
-            server()
-            programArgument '--nogui'
-            systemProperty 'neoforge.enabledGameTestNamespaces', project.mod_id
-        }
-
-        gameTestServer {
-            type = "gameTestServer"
-            systemProperty 'neoforge.enabledGameTestNamespaces', project.mod_id
-        }
-
-        data {
-            data()
-            programArguments.addAll '--mod', project.mod_id, '--all', '--output', file('src/generated/resources/').getAbsolutePath(), '--existing', file('src/main/resources/').getAbsolutePath()
-        }
-
-        configureEach {
-            systemProperty 'forge.logging.markers', 'REGISTRIES'
-            logLevel = org.slf4j.event.Level.DEBUG
-        }
-    }
-
-    mods {
-        "${mod_id}" {
-            sourceSet(sourceSets.main)
-=======
 java.toolchain.languageVersion = JavaLanguageVersion.of(17)
 
 println "Java: ${System.getProperty 'java.version'}, JVM: ${System.getProperty 'java.vm.version'} (${System.getProperty 'java.vendor'}), Arch: ${System.getProperty 'os.arch'}"
@@ -117,7 +60,6 @@ minecraft {
                     source sourceSets.main
                 }
             }
->>>>>>> Stashed changes
         }
     }
 }
@@ -128,6 +70,7 @@ configurations {
     localRuntime
     runtimeClasspath.extendsFrom localRuntime
 }
+
 repositories {
     mavenCentral()
     maven {
@@ -145,39 +88,30 @@ repositories {
         url = "https://maven.blamejared.com"
     }
     maven {
-		name = "TerraformersMC"
-		url = "https://maven.terraformersmc.com/"
-	}
+        name = "TerraformersMC"
+        url = "https://maven.terraformersmc.com/"
+    }
     maven {
         url = 'https://api.modrinth.com/maven'
         content {
             includeGroup 'maven.modrinth'
         }
     }
-     maven {
+    maven {
         url = 'https://maven2.bai.lol'
         content {
             includeGroup 'lol.bai'
             includeGroup 'mcp.mobius.waila'
         }
     }
-     maven { // TOP
+    maven {
         name 'tterrag maven'
         url "https://maven.tterrag.com/"
     }
     maven { url "https://maven.shedaniel.me" }
 }
+
 dependencies {
-<<<<<<< Updated upstream
-    //jei
-    compileOnly "mezz.jei:jei-${minecraft_version}-common-api:${jei_version}"
-    compileOnly "mezz.jei:jei-${minecraft_version}-neoforge-api:${jei_version}"
-    runtimeOnly "mezz.jei:jei-${minecraft_version}-neoforge:${jei_version}"
-    
-}
-
-
-=======
     minecraft "net.minecraftforge:forge:${minecraft_version}-${forge_version}"
 
     // JEI
@@ -196,7 +130,6 @@ dependencies {
    localRuntime fg.deobf("curse.maven:ato-405593:${ato_version}")
 }
 
->>>>>>> Stashed changes
 tasks.withType(ProcessResources).configureEach {
     var replaceProperties = [
             minecraft_version      : minecraft_version,
@@ -208,14 +141,6 @@ tasks.withType(ProcessResources).configureEach {
             mod_license            : mod_license,
             mod_version            : mod_version,
             authors                : authors,
-<<<<<<< Updated upstream
-            issue_tracker        : issue_tracker,
-    ]
-    
-    inputs.properties replaceProperties
-    
-    filesMatching('META-INF/neoforge.mods.toml') {
-=======
             issue_tracker          : issue_tracker,
             allthemodium_version: allthemodium_version,
             geckolib_version : geckolib_version,
@@ -226,7 +151,6 @@ tasks.withType(ProcessResources).configureEach {
     inputs.properties replaceProperties
 
     filesMatching('META-INF/mods.toml') {
->>>>>>> Stashed changes
         expand replaceProperties
     }
 }

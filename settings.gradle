@@ -1,11 +1,8 @@
 pluginManagement {
     repositories {
         gradlePluginPortal()
-<<<<<<< Updated upstream
-=======
         maven { url = 'https://maven.minecraftforge.net' }
         maven { url = 'https://maven.parchmentmc.org' }
->>>>>>> Stashed changes
     }
 }
 
