@@ -1,0 +1,27 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "allthemodium"
+    }
+  ],
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "a": {
+      "tag": "c:plates/unobtainium"
+    },
+    "r": {
+      "tag": "c:rods/unobtainium"
+    }
+  },
+  "pattern": [
+    " a ",
+    " r ",
+    " r "
+  ],
+  "result": {
+    "count": 1,
+    "id": "allthemodium:unobtainium_shovel"
+  }
+}

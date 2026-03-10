@@ -1,0 +1,27 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "allthemodium"
+    }
+  ],
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "a": {
+      "tag": "c:plates/allthemodium"
+    },
+    "r": {
+      "tag": "c:rods/allthemodium"
+    }
+  },
+  "pattern": [
+    "aa",
+    "ar",
+    " r"
+  ],
+  "result": {
+    "count": 1,
+    "id": "allthemodium:allthemodium_axe"
+  }
+}
