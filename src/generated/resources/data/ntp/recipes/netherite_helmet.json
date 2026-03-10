@@ -11,7 +11,7 @@
     "a a"
   ],
   "result": {
-    "count": 1,
-    "id": "minecraft:netherite_helmet"
-  }
+    "item": "minecraft:netherite_helmet"
+  },
+  "show_notification": true
 }

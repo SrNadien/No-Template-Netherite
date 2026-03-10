@@ -1,0 +1,34 @@
+{
+  "type": "forge:conditional",
+  "recipes": [
+    {
+      "conditions": [
+        {
+          "type": "forge:mod_loaded",
+          "modid": "allthemodium"
+        }
+      ],
+      "recipe": {
+        "type": "minecraft:crafting_shaped",
+        "category": "equipment",
+        "key": {
+          "a": {
+            "tag": "forge:plates/allthemodium"
+          },
+          "r": {
+            "tag": "forge:rods/allthemodium"
+          }
+        },
+        "pattern": [
+          " a ",
+          " a ",
+          " r "
+        ],
+        "result": {
+          "item": "allthemodium:allthemodium_sword"
+        },
+        "show_notification": true
+      }
+    }
+  ]
+}

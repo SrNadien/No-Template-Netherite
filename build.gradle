@@ -1,6 +1,7 @@
 plugins {
     id 'java-library'
     id 'maven-publish'
+<<<<<<< Updated upstream
     id 'net.neoforged.moddev' version '2.0.137'
     id 'idea'
 }
@@ -10,12 +11,21 @@ tasks.named('wrapper', Wrapper).configure {
 }
 
 version = minecraft_version + "-" + mod_version + "-" + tag_lanzador
+=======
+    id 'net.minecraftforge.gradle' version '[6.0,6.2)'
+    id 'org.parchmentmc.librarian.forgegradle' version '1.+'
+    id 'idea'
+}
+
+version = "${minecraft_version}-${mod_version}-${tag_lanzador}"
+>>>>>>> Stashed changes
 group = mod_group_id
 
 base {
     archivesName = mod_name
 }
 
+<<<<<<< Updated upstream
 
 
 java.toolchain.languageVersion = JavaLanguageVersion.of(21)
@@ -59,6 +69,55 @@ neoForge {
     mods {
         "${mod_id}" {
             sourceSet(sourceSets.main)
+=======
+java.toolchain.languageVersion = JavaLanguageVersion.of(17)
+
+println "Java: ${System.getProperty 'java.version'}, JVM: ${System.getProperty 'java.vm.version'} (${System.getProperty 'java.vendor'}), Arch: ${System.getProperty 'os.arch'}"
+
+minecraft {
+    mappings channel: 'parchment', version: "${parchment_mappings_version}-${minecraft_version}"
+
+    copyIdeResources = true
+
+    runs {
+        client {
+            workingDirectory project.file('run')
+            property 'forge.logging.markers', 'REGISTRIES'
+            property 'forge.logging.console.level', 'debug'
+            property 'forge.enabledGameTestNamespaces', mod_id
+            mods {
+                "${mod_id}" {
+                    source sourceSets.main
+                }
+            }
+        }
+
+        server {
+            workingDirectory project.file('run')
+            property 'forge.logging.markers', 'REGISTRIES'
+            property 'forge.logging.console.level', 'debug'
+            property 'forge.enabledGameTestNamespaces', mod_id
+            args '--nogui'
+            mods {
+                "${mod_id}" {
+                    source sourceSets.main
+                }
+            }
+        }
+
+        data {
+            workingDirectory project.file('run')
+            property 'forge.logging.markers', 'REGISTRIES'
+            property 'forge.logging.console.level', 'debug'
+            args '--mod', mod_id, '--all',
+                 '--output', file('src/generated/resources/').absolutePath,
+                 '--existing', file('src/main/resources/').absolutePath
+            mods {
+                "${mod_id}" {
+                    source sourceSets.main
+                }
+            }
+>>>>>>> Stashed changes
         }
     }
 }
@@ -66,6 +125,7 @@ neoForge {
 sourceSets.main.resources { srcDir 'src/generated/resources' }
 
 configurations {
+    localRuntime
     runtimeClasspath.extendsFrom localRuntime
 }
 repositories {
@@ -108,6 +168,7 @@ repositories {
     maven { url "https://maven.shedaniel.me" }
 }
 dependencies {
+<<<<<<< Updated upstream
     //jei
     compileOnly "mezz.jei:jei-${minecraft_version}-common-api:${jei_version}"
     compileOnly "mezz.jei:jei-${minecraft_version}-neoforge-api:${jei_version}"
@@ -116,23 +177,56 @@ dependencies {
 }
 
 
+=======
+    minecraft "net.minecraftforge:forge:${minecraft_version}-${forge_version}"
+
+    // JEI
+    // compileOnly "mezz.jei:jei-${minecraft_version}-common-api:${jei_version}"
+    // compileOnly "mezz.jei:jei-${minecraft_version}-forge-api:${jei_version}"
+    // runtimeOnly "mezz.jei:jei-${minecraft_version}-forge:${jei_version}"
+    compileOnly "mezz.jei:jei-${minecraft_version}-common-api:${jei_version}"
+    compileOnly "mezz.jei:jei-${minecraft_version}-forge-api:${jei_version}"
+
+   // allthemodium y librerias
+   compileOnly  fg.deobf("curse.maven:allthemodium-364466:${allthemodium_version}")
+   localRuntime fg.deobf("curse.maven:allthemodium-364466:${allthemodium_version}")
+   compileOnly  fg.deobf("curse.maven:geckolib-388172:${geckolib_version}")
+   localRuntime fg.deobf("curse.maven:geckolib-388172:${geckolib_version}")
+   compileOnly  fg.deobf("curse.maven:ato-405593:${ato_version}")
+   localRuntime fg.deobf("curse.maven:ato-405593:${ato_version}")
+}
+
+>>>>>>> Stashed changes
 tasks.withType(ProcessResources).configureEach {
     var replaceProperties = [
             minecraft_version      : minecraft_version,
             minecraft_version_range: minecraft_version_range,
-            neo_version            : neo_version,
+            forge_version          : forge_version,
             loader_version_range   : loader_version_range,
             mod_id                 : mod_id,
             mod_name               : mod_name,
             mod_license            : mod_license,
             mod_version            : mod_version,
             authors                : authors,
+<<<<<<< Updated upstream
             issue_tracker        : issue_tracker,
     ]
     
     inputs.properties replaceProperties
     
     filesMatching('META-INF/neoforge.mods.toml') {
+=======
+            issue_tracker          : issue_tracker,
+            allthemodium_version: allthemodium_version,
+            geckolib_version : geckolib_version,
+            ato_version : ato_version,
+            jei_version : jei_version,
+    ]
+
+    inputs.properties replaceProperties
+
+    filesMatching('META-INF/mods.toml') {
+>>>>>>> Stashed changes
         expand replaceProperties
     }
 }

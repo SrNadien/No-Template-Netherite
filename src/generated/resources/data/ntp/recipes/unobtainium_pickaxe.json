@@ -1,0 +1,34 @@
+{
+  "type": "forge:conditional",
+  "recipes": [
+    {
+      "conditions": [
+        {
+          "type": "forge:mod_loaded",
+          "modid": "allthemodium"
+        }
+      ],
+      "recipe": {
+        "type": "minecraft:crafting_shaped",
+        "category": "equipment",
+        "key": {
+          "a": {
+            "tag": "forge:plates/unobtainium"
+          },
+          "r": {
+            "tag": "forge:rods/unobtainium"
+          }
+        },
+        "pattern": [
+          "ara",
+          " r ",
+          " r "
+        ],
+        "result": {
+          "item": "allthemodium:unobtainium_pickaxe"
+        },
+        "show_notification": true
+      }
+    }
+  ]
+}

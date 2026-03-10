@@ -1,0 +1,34 @@
+{
+  "type": "forge:conditional",
+  "recipes": [
+    {
+      "conditions": [
+        {
+          "type": "forge:mod_loaded",
+          "modid": "allthemodium"
+        }
+      ],
+      "recipe": {
+        "type": "minecraft:crafting_shaped",
+        "category": "equipment",
+        "key": {
+          "a": {
+            "tag": "forge:ingots/vibranium"
+          },
+          "n": {
+            "item": "minecraft:netherite_ingot"
+          }
+        },
+        "pattern": [
+          "a a",
+          "ana",
+          "aaa"
+        ],
+        "result": {
+          "item": "allthemodium:vibranium_chestplate"
+        },
+        "show_notification": true
+      }
+    }
+  ]
+}
