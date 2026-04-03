@@ -19,8 +19,13 @@ build
 
 # other
 eclipse
-run
-runs
+/run*
+/run/*
 run-data
+run
 
-repo
+# Files from Forge MDK
+forge*changelog.txt
+
+.cache
+logs
