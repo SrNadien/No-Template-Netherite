@@ -1,25 +1,53 @@
+This mod addresses the issue introduced in Minecraft 1.20.x and 1.21.x where the Netherite Upgrade Template was required to upgrade diamond armor and tools using the Smithing Table. By removing the need for the template, the mod restores the simpler upgrade mechanic from earlier versions of Minecraft, where players only needed Netherite ingots and diamond equipment to perform the upgrade. This mod is ideal for those who prefer a more streamlined progression without the additional step introduced in the newer updates.
 
-Installation information
-=======
+Versions
+__________________________
+v17 ??? ❎
 
-This template repository can be directly cloned to get you started with a new
-mod. Simply create a new repository cloned from this one, by following the
-instructions provided by [GitHub](https://docs.github.com/en/repositories/creating-and-managing-repositories/creating-a-repository-from-a-template).
+V16 26.1.2✅
 
-Once you have your clone, simply open the repository in the IDE of your choice. The usual recommendation for an IDE is either IntelliJ IDEA or Eclipse.
+V16 26.1.1✅
 
-If at any point you are missing libraries in your IDE, or you've run into problems you can
-run `gradlew --refresh-dependencies` to refresh the local cache. `gradlew clean` to reset everything 
-{this does not affect your code} and then start the process again.
+V16 26.1✅
 
-Mapping Names:
-============
-By default, the MDK is configured to use the official mapping names from Mojang for methods and fields 
-in the Minecraft codebase. These names are covered by a specific license. All modders should be aware of this
-license. For the latest license text, refer to the mapping file itself, or the reference copy here:
-https://github.com/NeoForged/NeoForm/blob/main/Mojang.md
+v15 1.21.11✅
 
-Additional Resources: 
-==========
-Community Documentation: https://docs.neoforged.net/  
-NeoForged Discord: https://discord.neoforged.net/
+v14 1.21.10✅
+
+v13 1.21.9✅
+
+v12 1.21.8✅
+
+V12 1-21-7✅
+
+v12 1-21-6✅
+
+v11 1.21.5✅
+
+v11 1.21.4✅
+
+v10 1.21.3✅
+
+v10 1.21.2✅
+
+v10 1.21.1✅
+
+v9.0 1.20.1✅
+__________________________
+Mods Supported:
+
+
+
+AllTheModium (1.20.1 And 1.21.1)
+
+Future Supports:
+
+Applied Energistics 2
+
+Forbidden And Arcanus 
+
+Advanced Netherite
+
+Ex Deorum                                    
+
+  
