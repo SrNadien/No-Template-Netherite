@@ -2,34 +2,52 @@ This mod addresses the issue introduced in Minecraft 1.20.x and 1.21.x where the
 
 Versions
 __________________________
-v17 ???
+v17 ??? ❎
 
-V16 26.1
+V16 26.1.2✅
 
-v15 1.21.11
+V16 26.1.1✅
 
-v14 1.21.10
+V16 26.1✅
 
-v13 1.21.9
+v15 1.21.11✅
 
-v12 1.21.8
+v14 1.21.10✅
 
-V12 1-21-7
+v13 1.21.9✅
 
-v12 1-21-6
+v12 1.21.8✅
 
-v11 1.21.5
+V12 1-21-7✅
 
-v11 1.21.4
+v12 1-21-6✅
 
-v10 1.21.3
+v11 1.21.5✅
 
-v10 1.21.2
+v11 1.21.4✅
 
-v10 1.21.1
+v10 1.21.3✅
 
-v9.0 1.20.1
+v10 1.21.2✅
+
+v10 1.21.1✅
+
+v9.0 1.20.1✅
 __________________________
 Mods Supported:
 
-?????
+
+
+AllTheModium (1.20.1 And 1.21.1)
+
+Future Supports:
+
+Applied Energistics 2
+
+Forbidden And Arcanus 
+
+Advanced Netherite
+
+Ex Deorum                                    
+
+  
