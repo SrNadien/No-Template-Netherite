@@ -36,4 +36,15 @@ v9.0 1.20.1✅
 __________________________
 Mods Supported:
 
-?????
+
+
+AllTheModium (1.20.1 And 1.21.1)
+
+Future Supports:
+
+Applied Energistics 2
+Forbidden And Arcanus 
+Advanced Netherite
+Ex Deorum                                    
+
+  
