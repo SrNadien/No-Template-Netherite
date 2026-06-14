@@ -13,11 +13,14 @@
     },
     "r": {
       "tag": "c:rods/allthemodium"
+    },
+    "s": {
+      "item": "minecraft:netherite_sword"
     }
   },
   "pattern": [
     " a ",
-    " a ",
+    " s ",
     " r "
   ],
   "result": {

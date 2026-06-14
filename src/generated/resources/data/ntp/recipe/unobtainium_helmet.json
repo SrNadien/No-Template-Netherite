@@ -12,12 +12,12 @@
       "tag": "c:ingots/unobtainium"
     },
     "n": {
-      "item": "minecraft:netherite_ingot"
+      "item": "allthemodium:vibranium_helmet"
     }
   },
   "pattern": [
-    "aaa",
-    "ana"
+    "ana",
+    "aaa"
   ],
   "result": {
     "count": 1,

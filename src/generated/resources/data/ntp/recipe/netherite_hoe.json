@@ -7,10 +7,13 @@
     },
     "b": {
       "item": "minecraft:stick"
+    },
+    "s": {
+      "item": "minecraft:diamond_hoe"
     }
   },
   "pattern": [
-    "aa",
+    "as",
     " b",
     " b"
   ],

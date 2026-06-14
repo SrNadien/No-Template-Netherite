@@ -13,11 +13,14 @@
     },
     "r": {
       "tag": "c:rods/unobtainium"
+    },
+    "s": {
+      "item": "allthemodium:vibranium_sword"
     }
   },
   "pattern": [
     " a ",
-    " a ",
+    " s ",
     " r "
   ],
   "result": {

@@ -13,11 +13,14 @@
     },
     "r": {
       "tag": "c:rods/vibranium"
+    },
+    "s": {
+      "item": "allthemodium:allthemodium_sword"
     }
   },
   "pattern": [
     " a ",
-    " a ",
+    " s ",
     " r "
   ],
   "result": {

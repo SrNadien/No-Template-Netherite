@@ -13,10 +13,13 @@
     },
     "r": {
       "tag": "c:rods/vibranium"
+    },
+    "s": {
+      "item": "allthemodium:allthemodium_pickaxe"
     }
   },
   "pattern": [
-    "ara",
+    "asa",
     " r ",
     " r "
   ],

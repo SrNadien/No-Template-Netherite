@@ -4,10 +4,13 @@
   "key": {
     "a": {
       "item": "minecraft:netherite_ingot"
+    },
+    "s": {
+      "item": "minecraft:diamond_boots"
     }
   },
   "pattern": [
-    "a a",
+    "asa",
     "a a"
   ],
   "result": {

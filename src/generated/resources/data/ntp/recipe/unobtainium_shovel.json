@@ -13,11 +13,14 @@
     },
     "r": {
       "tag": "c:rods/unobtainium"
+    },
+    "s": {
+      "item": "allthemodium:vibranium_shovel"
     }
   },
   "pattern": [
     " a ",
-    " r ",
+    " s ",
     " r "
   ],
   "result": {

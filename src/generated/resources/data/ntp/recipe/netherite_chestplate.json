@@ -4,11 +4,14 @@
   "key": {
     "a": {
       "item": "minecraft:netherite_ingot"
+    },
+    "s": {
+      "item": "minecraft:diamond_chestplate"
     }
   },
   "pattern": [
     "a a",
-    "aaa",
+    "asa",
     "aaa"
   ],
   "result": {

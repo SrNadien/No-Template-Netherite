@@ -7,11 +7,14 @@
     },
     "b": {
       "item": "minecraft:stick"
+    },
+    "s": {
+      "item": "minecraft:diamond_sword"
     }
   },
   "pattern": [
     "a",
-    "a",
+    "s",
     "b"
   ],
   "result": {

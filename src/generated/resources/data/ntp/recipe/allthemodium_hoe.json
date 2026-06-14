@@ -13,10 +13,13 @@
     },
     "r": {
       "tag": "c:rods/allthemodium"
+    },
+    "s": {
+      "item": "minecraft:netherite_hoe"
     }
   },
   "pattern": [
-    "aa ",
+    "as ",
     " r ",
     " r "
   ],
