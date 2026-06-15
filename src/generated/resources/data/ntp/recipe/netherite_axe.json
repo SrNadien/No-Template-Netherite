@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "a": "minecraft:netherite_ingot",
+    "b": "minecraft:stick",
+    "s": "minecraft:diamond_axe"
+  },
+  "pattern": [
+    "as",
+    "ab",
+    " b"
+  ],
+  "result": {
+    "id": "minecraft:netherite_axe"
+  }
+}

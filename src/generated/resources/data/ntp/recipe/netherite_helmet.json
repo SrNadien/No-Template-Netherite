@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "a": "minecraft:netherite_ingot",
+    "s": "minecraft:diamond_helmet"
+  },
+  "pattern": [
+    "asa",
+    "a a"
+  ],
+  "result": {
+    "id": "minecraft:netherite_helmet"
+  }
+}

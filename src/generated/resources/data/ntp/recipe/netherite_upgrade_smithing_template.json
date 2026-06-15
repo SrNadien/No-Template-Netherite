@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "a": "minecraft:obsidian",
+    "b": "minecraft:diamond",
+    "c": "minecraft:emerald"
+  },
+  "pattern": [
+    "aba",
+    "aca",
+    "aaa"
+  ],
+  "result": {
+    "id": "minecraft:netherite_upgrade_smithing_template"
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "allthemodium"
+    }
+  ],
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "a": "#c:ingots/vibranium",
+    "n": "allthemodium:allthemodium_boots"
+  },
+  "pattern": [
+    "a a",
+    "ana"
+  ],
+  "result": {
+    "id": "allthemodium:vibranium_boots"
+  }
+}

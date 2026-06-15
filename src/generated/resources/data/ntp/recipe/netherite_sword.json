@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "a": "minecraft:netherite_ingot",
+    "b": "minecraft:stick",
+    "s": "minecraft:diamond_sword"
+  },
+  "pattern": [
+    "a",
+    "s",
+    "b"
+  ],
+  "result": {
+    "id": "minecraft:netherite_sword"
+  }
+}

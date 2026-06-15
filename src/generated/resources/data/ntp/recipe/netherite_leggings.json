@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "a": "minecraft:netherite_ingot",
+    "s": "minecraft:diamond_leggings"
+  },
+  "pattern": [
+    "asa",
+    "a a",
+    "a a"
+  ],
+  "result": {
+    "id": "minecraft:netherite_leggings"
+  }
+}

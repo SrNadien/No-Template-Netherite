@@ -1,0 +1,22 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "allthemodium"
+    }
+  ],
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "a": "#c:ingots/allthemodium",
+    "n": "minecraft:netherite_chestplate"
+  },
+  "pattern": [
+    "a a",
+    "ana",
+    "aaa"
+  ],
+  "result": {
+    "id": "allthemodium:allthemodium_chestplate"
+  }
+}
