@@ -13,11 +13,14 @@
     },
     "r": {
       "tag": "c:rods/allthemodium"
+    },
+    "s": {
+      "item": "minecraft:netherite_shovel"
     }
   },
   "pattern": [
     " a ",
-    " r ",
+    " s ",
     " r "
   ],
   "result": {

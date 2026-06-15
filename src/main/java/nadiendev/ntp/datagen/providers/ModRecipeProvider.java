@@ -127,8 +127,8 @@ public class ModRecipeProvider extends RecipeProvider {
             .save(atm, rl("allthemodium_axe"));
 
         ShapedRecipeBuilder.shaped(RecipeCategory.TOOLS, ModRegistry.ATM_SHOVEL.get(), 1)
-            .pattern(" a ").pattern(" r ").pattern(" r ")
-            .define('a', TagRegistry.ALLTHEMODIUM_PLATE).define('r', TagRegistry.ALLTHEMODIUM_ROD)
+            .pattern(" a ").pattern(" s ").pattern(" r ")
+            .define('a', TagRegistry.ALLTHEMODIUM_PLATE).define('r', TagRegistry.ALLTHEMODIUM_ROD).define('s', Items.NETHERITE_SHOVEL)
             .unlockedBy("has_allthemodium_plate", has(TagRegistry.ALLTHEMODIUM_PLATE))
             .save(atm, rl("allthemodium_shovel"));
 
