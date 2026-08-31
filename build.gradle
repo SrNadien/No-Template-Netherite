@@ -1,12 +1,7 @@
 plugins {
     id 'java-library'
     id 'maven-publish'
-<<<<<<< Updated upstream
-    id 'net.neoforged.moddev' version '2.0.137'
-    id 'idea'
-=======
     id 'net.neoforged.gradle.userdev' version '7.1.38'
->>>>>>> Stashed changes
 }
 
 tasks.named('wrapper', Wrapper).configure {
