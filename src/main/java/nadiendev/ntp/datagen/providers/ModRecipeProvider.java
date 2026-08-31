@@ -1,7 +1,7 @@
 package nadiendev.ntp.datagen.providers;
 
-import com.thevortex.allthemodium.registry.ModRegistry;
-import com.thevortex.allthemodium.registry.TagRegistry;
+// import net.allthemods.allthemodium.core.registry.ATMItems;
+// import net.allthemods.allthemodium.core.registry.ATMTags;
 import nadiendev.ntp.NoNetheriteTemplate;
 import net.minecraft.advancements.AdvancementHolder;
 import net.minecraft.core.HolderLookup;
@@ -10,7 +10,7 @@ import net.minecraft.data.recipes.*;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.Items;
 import net.neoforged.neoforge.common.conditions.ICondition;
-import net.neoforged.neoforge.common.conditions.ModLoadedCondition;
+// import net.neoforged.neoforge.common.conditions.ModLoadedCondition;
 
 import java.util.concurrent.CompletableFuture;
 
@@ -24,11 +24,11 @@ public class ModRecipeProvider extends RecipeProvider {
     protected void buildRecipes(RecipeOutput writer) {
 
         // base → recetas normales sin advancements
-        // atm/vib/uno → solo cargan si allthemodium está instalado
-        RecipeOutput base = noAdvancement(writer);
-        RecipeOutput atm  = noAdvancement(writer.withConditions(new ModLoadedCondition("allthemodium")));
-        RecipeOutput vib  = noAdvancement(writer.withConditions(new ModLoadedCondition("allthemodium")));
-        RecipeOutput uno  = noAdvancement(writer.withConditions(new ModLoadedCondition("allthemodium")));
+        // allthemodium no tiene build para 26.2: recetas atm/vib/uno desactivadas
+        RecipeOutput base = noAdvancement(output);
+        // RecipeOutput atm  = noAdvancement(output.withConditions(new ModLoadedCondition("allthemodium")));
+        // RecipeOutput vib  = noAdvancement(output.withConditions(new ModLoadedCondition("allthemodium")));
+        // RecipeOutput uno  = noAdvancement(output.withConditions(new ModLoadedCondition("allthemodium")));
 
         // ==========================================
         // NETHERITE 
@@ -110,179 +110,179 @@ public class ModRecipeProvider extends RecipeProvider {
             .unlockedBy("has_netherite_ingot", has(Items.NETHERITE_INGOT))
             .save(base, rl("netherite_sword"));
 
-        // ==========================================
-        // ALLTHEMODIUM — plate+rod herramientas, ingot+netherite armaduras
-        // ==========================================
-
-        ShapedRecipeBuilder.shaped(RecipeCategory.TOOLS, ModRegistry.ATM_PICKAXE.get(), 1)
-            .pattern("asa").pattern(" r ").pattern(" r ")
-            .define('a', TagRegistry.ALLTHEMODIUM_PLATE).define('r', TagRegistry.ALLTHEMODIUM_ROD).define('s', Items.NETHERITE_PICKAXE)
-            .unlockedBy("has_allthemodium_plate", has(TagRegistry.ALLTHEMODIUM_PLATE))
-            .save(atm, rl("allthemodium_pickaxe"));
-
-        ShapedRecipeBuilder.shaped(RecipeCategory.TOOLS, ModRegistry.ATM_AXE.get(), 1)
-            .pattern("as").pattern("ar").pattern(" r")
-            .define('a', TagRegistry.ALLTHEMODIUM_PLATE).define('r', TagRegistry.ALLTHEMODIUM_ROD).define('s', Items.NETHERITE_AXE)
-            .unlockedBy("has_allthemodium_plate", has(TagRegistry.ALLTHEMODIUM_PLATE))
-            .save(atm, rl("allthemodium_axe"));
-
-        ShapedRecipeBuilder.shaped(RecipeCategory.TOOLS, ModRegistry.ATM_SHOVEL.get(), 1)
-            .pattern(" a ").pattern(" s ").pattern(" r ")
-            .define('a', TagRegistry.ALLTHEMODIUM_PLATE).define('r', TagRegistry.ALLTHEMODIUM_ROD).define('s', Items.NETHERITE_SHOVEL)
-            .unlockedBy("has_allthemodium_plate", has(TagRegistry.ALLTHEMODIUM_PLATE))
-            .save(atm, rl("allthemodium_shovel"));
-
-        ShapedRecipeBuilder.shaped(RecipeCategory.TOOLS, ModRegistry.ATM_HOE.get(), 1)
-            .pattern("as ").pattern(" r ").pattern(" r ")
-            .define('a', TagRegistry.ALLTHEMODIUM_PLATE).define('r', TagRegistry.ALLTHEMODIUM_ROD).define('s', Items.NETHERITE_HOE)
-            .unlockedBy("has_allthemodium_plate", has(TagRegistry.ALLTHEMODIUM_PLATE))
-            .save(atm, rl("allthemodium_hoe"));
-
-        ShapedRecipeBuilder.shaped(RecipeCategory.COMBAT, ModRegistry.ATM_SWORD.get(), 1)
-            .pattern(" a ").pattern(" s ").pattern(" r ")
-            .define('a', TagRegistry.ALLTHEMODIUM_PLATE).define('r', TagRegistry.ALLTHEMODIUM_ROD).define('s', Items.NETHERITE_SWORD)
-            .unlockedBy("has_allthemodium_plate", has(TagRegistry.ALLTHEMODIUM_PLATE))
-            .save(atm, rl("allthemodium_sword"));
-
-        ShapedRecipeBuilder.shaped(RecipeCategory.COMBAT, ModRegistry.ALLTHEMODIUM_HELMET.get(), 1)
-            .pattern("ana").pattern("aaa")
-            .define('a', TagRegistry.ALLTHEMODIUM_INGOT).define('n', Items.NETHERITE_HELMET)
-            .unlockedBy("has_allthemodium_ingot", has(TagRegistry.ALLTHEMODIUM_INGOT))
-            .save(atm, rl("allthemodium_helmet"));
-
-        ShapedRecipeBuilder.shaped(RecipeCategory.COMBAT, ModRegistry.ALLTHEMODIUM_CHESTPLATE.get(), 1)
-            .pattern("a a").pattern("ana").pattern("aaa")
-            .define('a', TagRegistry.ALLTHEMODIUM_INGOT).define('n', Items.NETHERITE_CHESTPLATE)
-            .unlockedBy("has_allthemodium_ingot", has(TagRegistry.ALLTHEMODIUM_INGOT))
-            .save(atm, rl("allthemodium_chestplate"));
-
-        ShapedRecipeBuilder.shaped(RecipeCategory.COMBAT, ModRegistry.ALLTHEMODIUM_LEGGINGS.get(), 1)
-            .pattern("aaa").pattern("ana").pattern("a a")
-            .define('a', TagRegistry.ALLTHEMODIUM_INGOT).define('n', Items.NETHERITE_LEGGINGS)
-            .unlockedBy("has_allthemodium_ingot", has(TagRegistry.ALLTHEMODIUM_INGOT))
-            .save(atm, rl("allthemodium_leggings"));
-
-        ShapedRecipeBuilder.shaped(RecipeCategory.COMBAT, ModRegistry.ALLTHEMODIUM_BOOTS.get(), 1)
-            .pattern("a a").pattern("ana")
-            .define('a', TagRegistry.ALLTHEMODIUM_INGOT).define('n', Items.NETHERITE_BOOTS)
-            .unlockedBy("has_allthemodium_ingot", has(TagRegistry.ALLTHEMODIUM_INGOT))
-            .save(atm, rl("allthemodium_boots"));
-
-        // ==========================================
-        // VIBRANIUM — misma condición allthemodium
-        // ==========================================
-
-        ShapedRecipeBuilder.shaped(RecipeCategory.TOOLS, ModRegistry.VIB_PICKAXE.get(), 1)
-            .pattern("asa").pattern(" r ").pattern(" r ")
-            .define('a', TagRegistry.VIBRANIUM_PLATE).define('r', TagRegistry.VIBRANIUM_ROD).define('s', ModRegistry.ATM_PICKAXE.get())
-            .unlockedBy("has_vibranium_plate", has(TagRegistry.VIBRANIUM_PLATE))
-            .save(vib, rl("vibranium_pickaxe"));
-
-        ShapedRecipeBuilder.shaped(RecipeCategory.TOOLS, ModRegistry.VIB_AXE.get(), 1)
-            .pattern("as").pattern("ar").pattern(" r")
-            .define('a', TagRegistry.VIBRANIUM_PLATE).define('r', TagRegistry.VIBRANIUM_ROD).define('s', ModRegistry.ATM_AXE.get())
-            .unlockedBy("has_vibranium_plate", has(TagRegistry.VIBRANIUM_PLATE))
-            .save(vib, rl("vibranium_axe"));
-
-        ShapedRecipeBuilder.shaped(RecipeCategory.TOOLS, ModRegistry.VIB_SHOVEL.get(), 1)
-            .pattern(" a ").pattern(" s ").pattern(" r ")
-            .define('a', TagRegistry.VIBRANIUM_PLATE).define('r', TagRegistry.VIBRANIUM_ROD).define('s', ModRegistry.ATM_SHOVEL.get())
-            .unlockedBy("has_vibranium_plate", has(TagRegistry.VIBRANIUM_PLATE))
-            .save(vib, rl("vibranium_shovel"));
-
-        ShapedRecipeBuilder.shaped(RecipeCategory.TOOLS, ModRegistry.VIB_HOE.get(), 1)
-            .pattern("as ").pattern(" r ").pattern(" r ")
-            .define('a', TagRegistry.VIBRANIUM_PLATE).define('r', TagRegistry.VIBRANIUM_ROD).define('s', ModRegistry.ATM_HOE.get())
-            .unlockedBy("has_vibranium_plate", has(TagRegistry.VIBRANIUM_PLATE))
-            .save(vib, rl("vibranium_hoe"));
-
-        ShapedRecipeBuilder.shaped(RecipeCategory.COMBAT, ModRegistry.VIB_SWORD.get(), 1)
-            .pattern(" a ").pattern(" s ").pattern(" r ")
-            .define('a', TagRegistry.VIBRANIUM_PLATE).define('r', TagRegistry.VIBRANIUM_ROD).define('s', ModRegistry.ATM_SWORD.get())
-            .unlockedBy("has_vibranium_plate", has(TagRegistry.VIBRANIUM_PLATE))
-            .save(vib, rl("vibranium_sword"));
-
-        ShapedRecipeBuilder.shaped(RecipeCategory.COMBAT, ModRegistry.VIBRANIUM_HELMET.get(), 1)
-            .pattern("ana").pattern("aaa")
-            .define('a', TagRegistry.VIBRANIUM_INGOT).define('n', ModRegistry.ALLTHEMODIUM_HELMET.get())
-            .unlockedBy("has_vibranium_ingot", has(TagRegistry.VIBRANIUM_INGOT))
-            .save(vib, rl("vibranium_helmet"));
-
-        ShapedRecipeBuilder.shaped(RecipeCategory.COMBAT, ModRegistry.VIBRANIUM_CHESTPLATE.get(), 1)
-            .pattern("a a").pattern("ana").pattern("aaa")
-            .define('a', TagRegistry.VIBRANIUM_INGOT).define('n', ModRegistry.ALLTHEMODIUM_CHESTPLATE.get())
-            .unlockedBy("has_vibranium_ingot", has(TagRegistry.VIBRANIUM_INGOT))
-            .save(vib, rl("vibranium_chestplate"));
-
-        ShapedRecipeBuilder.shaped(RecipeCategory.COMBAT, ModRegistry.VIBRANIUM_LEGGINGS.get(), 1)
-            .pattern("aaa").pattern("ana").pattern("a a")
-            .define('a', TagRegistry.VIBRANIUM_INGOT).define('n', ModRegistry.ALLTHEMODIUM_LEGGINGS.get())
-            .unlockedBy("has_vibranium_ingot", has(TagRegistry.VIBRANIUM_INGOT))
-            .save(vib, rl("vibranium_leggings"));
-
-        ShapedRecipeBuilder.shaped(RecipeCategory.COMBAT, ModRegistry.VIBRANIUM_BOOTS.get(), 1)
-            .pattern("a a").pattern("ana")
-            .define('a', TagRegistry.VIBRANIUM_INGOT).define('n', ModRegistry.ALLTHEMODIUM_BOOTS.get())
-            .unlockedBy("has_vibranium_ingot", has(TagRegistry.VIBRANIUM_INGOT))
-            .save(vib, rl("vibranium_boots"));
-
-        // ==========================================
-        // UNOBTAINIUM — misma condición allthemodium
-        // ==========================================
-
-        ShapedRecipeBuilder.shaped(RecipeCategory.TOOLS, ModRegistry.UNO_PICKAXE.get(), 1)
-            .pattern("asa").pattern(" r ").pattern(" r ")
-            .define('a', TagRegistry.UNOBTAINIUM_PLATE).define('r', TagRegistry.UNOBTAINIUM_ROD).define('s', ModRegistry.VIB_PICKAXE.get())
-            .unlockedBy("has_unobtainium_plate", has(TagRegistry.UNOBTAINIUM_PLATE))
-            .save(uno, rl("unobtainium_pickaxe"));
-
-        ShapedRecipeBuilder.shaped(RecipeCategory.TOOLS, ModRegistry.UNO_AXE.get(), 1)
-            .pattern("as").pattern("ar").pattern(" r")
-            .define('a', TagRegistry.UNOBTAINIUM_PLATE).define('r', TagRegistry.UNOBTAINIUM_ROD).define('s', ModRegistry.VIB_AXE.get())
-            .unlockedBy("has_unobtainium_plate", has(TagRegistry.UNOBTAINIUM_PLATE))
-            .save(uno, rl("unobtainium_axe"));
-
-        ShapedRecipeBuilder.shaped(RecipeCategory.TOOLS, ModRegistry.UNO_SHOVEL.get(), 1)
-            .pattern(" a ").pattern(" s ").pattern(" r ")
-            .define('a', TagRegistry.UNOBTAINIUM_PLATE).define('r', TagRegistry.UNOBTAINIUM_ROD).define('s', ModRegistry.VIB_SHOVEL.get())
-            .unlockedBy("has_unobtainium_plate", has(TagRegistry.UNOBTAINIUM_PLATE))
-            .save(uno, rl("unobtainium_shovel"));
-
-        ShapedRecipeBuilder.shaped(RecipeCategory.TOOLS, ModRegistry.UNO_HOE.get(), 1)
-            .pattern("as ").pattern(" r ").pattern(" r ")
-            .define('a', TagRegistry.UNOBTAINIUM_PLATE).define('r', TagRegistry.UNOBTAINIUM_ROD).define('s', ModRegistry.VIB_HOE.get())
-            .unlockedBy("has_unobtainium_plate", has(TagRegistry.UNOBTAINIUM_PLATE))
-            .save(uno, rl("unobtainium_hoe"));
-
-        ShapedRecipeBuilder.shaped(RecipeCategory.COMBAT, ModRegistry.UNO_SWORD.get(), 1)
-            .pattern(" a ").pattern(" s ").pattern(" r ")
-            .define('a', TagRegistry.UNOBTAINIUM_PLATE).define('r', TagRegistry.UNOBTAINIUM_ROD).define('s', ModRegistry.VIB_SWORD.get())
-            .unlockedBy("has_unobtainium_plate", has(TagRegistry.UNOBTAINIUM_PLATE))
-            .save(uno, rl("unobtainium_sword"));
-
-        ShapedRecipeBuilder.shaped(RecipeCategory.COMBAT, ModRegistry.UNOBTAINIUM_HELMET.get(), 1)
-            .pattern("ana").pattern("aaa")
-            .define('a', TagRegistry.UNOBTAINIUM_INGOT).define('n', ModRegistry.VIBRANIUM_HELMET.get())
-            .unlockedBy("has_unobtainium_ingot", has(TagRegistry.UNOBTAINIUM_INGOT))
-            .save(uno, rl("unobtainium_helmet"));
-
-        ShapedRecipeBuilder.shaped(RecipeCategory.COMBAT, ModRegistry.UNOBTAINIUM_CHESTPLATE.get(), 1)
-            .pattern("a a").pattern("ana").pattern("aaa")
-            .define('a', TagRegistry.UNOBTAINIUM_INGOT).define('n', ModRegistry.VIBRANIUM_CHESTPLATE.get())
-            .unlockedBy("has_unobtainium_ingot", has(TagRegistry.UNOBTAINIUM_INGOT))
-            .save(uno, rl("unobtainium_chestplate"));
-
-        ShapedRecipeBuilder.shaped(RecipeCategory.COMBAT, ModRegistry.UNOBTAINIUM_LEGGINGS.get(), 1)
-            .pattern("aaa").pattern("ana").pattern("a a")
-            .define('a', TagRegistry.UNOBTAINIUM_INGOT).define('n', ModRegistry.VIBRANIUM_LEGGINGS.get())
-            .unlockedBy("has_unobtainium_ingot", has(TagRegistry.UNOBTAINIUM_INGOT))
-            .save(uno, rl("unobtainium_leggings"));
-
-        ShapedRecipeBuilder.shaped(RecipeCategory.COMBAT, ModRegistry.UNOBTAINIUM_BOOTS.get(), 1)
-            .pattern("a a").pattern("ana")
-            .define('a', TagRegistry.UNOBTAINIUM_INGOT).define('n', ModRegistry.VIBRANIUM_BOOTS.get())
-            .unlockedBy("has_unobtainium_ingot", has(TagRegistry.UNOBTAINIUM_INGOT))
-            .save(uno, rl("unobtainium_boots"));
+//         // ==========================================
+//         // ALLTHEMODIUM 
+//         // ==========================================
+// 
+//         ShapedRecipeBuilder.shaped(items, RecipeCategory.TOOLS, ATMItems.ALLTHEMODIUM_PICKAXE.get(), 1)
+//             .pattern("asa").pattern(" r ").pattern(" r ")
+//             .define('a', ATMTags.Items.PLATES_ALLTHEMODIUM).define('r', ATMTags.Items.RODS_ALLTHEMODIUM).define('s', Items.NETHERITE_PICKAXE)
+//             .unlockedBy("has_allthemodium_plate", has(ATMTags.Items.PLATES_ALLTHEMODIUM))
+//             .save(atm, rk("allthemodium_pickaxe"));
+// 
+//         ShapedRecipeBuilder.shaped(items, RecipeCategory.TOOLS, ATMItems.ALLTHEMODIUM_AXE.get(), 1)
+//             .pattern("as").pattern("ar").pattern(" r")
+//             .define('a', ATMTags.Items.PLATES_ALLTHEMODIUM).define('r', ATMTags.Items.RODS_ALLTHEMODIUM).define('s', Items.NETHERITE_AXE)
+//             .unlockedBy("has_allthemodium_plate", has(ATMTags.Items.PLATES_ALLTHEMODIUM))
+//             .save(atm, rk("allthemodium_axe"));
+// 
+//         ShapedRecipeBuilder.shaped(items, RecipeCategory.TOOLS, ATMItems.ALLTHEMODIUM_SHOVEL.get(), 1)
+//             .pattern(" a ").pattern(" s ").pattern(" r ")
+//             .define('a', ATMTags.Items.PLATES_ALLTHEMODIUM).define('r', ATMTags.Items.RODS_ALLTHEMODIUM).define('s', Items.NETHERITE_SHOVEL)
+//             .unlockedBy("has_allthemodium_plate", has(ATMTags.Items.PLATES_ALLTHEMODIUM))
+//             .save(atm, rk("allthemodium_shovel"));
+// 
+//         ShapedRecipeBuilder.shaped(items, RecipeCategory.TOOLS, ATMItems.ALLTHEMODIUM_HOE.get(), 1)
+//             .pattern("as ").pattern(" r ").pattern(" r ")
+//             .define('a', ATMTags.Items.PLATES_ALLTHEMODIUM).define('r', ATMTags.Items.RODS_ALLTHEMODIUM).define('s', Items.NETHERITE_HOE)
+//             .unlockedBy("has_allthemodium_plate", has(ATMTags.Items.PLATES_ALLTHEMODIUM))
+//             .save(atm, rk("allthemodium_hoe"));
+// 
+//         ShapedRecipeBuilder.shaped(items, RecipeCategory.COMBAT, ATMItems.ALLTHEMODIUM_SWORD.get(), 1)
+//             .pattern(" a ").pattern(" s ").pattern(" r ")
+//             .define('a', ATMTags.Items.PLATES_ALLTHEMODIUM).define('r', ATMTags.Items.RODS_ALLTHEMODIUM).define('s', Items.NETHERITE_SWORD)
+//             .unlockedBy("has_allthemodium_plate", has(ATMTags.Items.PLATES_ALLTHEMODIUM))
+//             .save(atm, rk("allthemodium_sword"));
+// 
+//         ShapedRecipeBuilder.shaped(items, RecipeCategory.COMBAT, ATMItems.ALLTHEMODIUM_HELMET.get(), 1)
+//             .pattern("aaa").pattern("ana")
+//             .define('a', ATMTags.Items.INGOTS_ALLTHEMODIUM).define('n', Items.NETHERITE_HELMET)
+//             .unlockedBy("has_allthemodium_ingot", has(ATMTags.Items.INGOTS_ALLTHEMODIUM))
+//             .save(atm, rk("allthemodium_helmet"));
+// 
+//         ShapedRecipeBuilder.shaped(items, RecipeCategory.COMBAT, ATMItems.ALLTHEMODIUM_CHESTPLATE.get(), 1)
+//             .pattern("a a").pattern("ana").pattern("aaa")
+//             .define('a', ATMTags.Items.INGOTS_ALLTHEMODIUM).define('n', Items.NETHERITE_CHESTPLATE)
+//             .unlockedBy("has_allthemodium_ingot", has(ATMTags.Items.INGOTS_ALLTHEMODIUM))
+//             .save(atm, rk("allthemodium_chestplate"));
+// 
+//         ShapedRecipeBuilder.shaped(items, RecipeCategory.COMBAT, ATMItems.ALLTHEMODIUM_LEGGINGS.get(), 1)
+//             .pattern("aaa").pattern("ana").pattern("a a")
+//             .define('a', ATMTags.Items.INGOTS_ALLTHEMODIUM).define('n', Items.NETHERITE_LEGGINGS)
+//             .unlockedBy("has_allthemodium_ingot", has(ATMTags.Items.INGOTS_ALLTHEMODIUM))
+//             .save(atm, rk("allthemodium_leggings"));
+// 
+//         ShapedRecipeBuilder.shaped(items, RecipeCategory.COMBAT, ATMItems.ALLTHEMODIUM_BOOTS.get(), 1)
+//             .pattern("a a").pattern("ana")
+//             .define('a', ATMTags.Items.INGOTS_ALLTHEMODIUM).define('n', Items.NETHERITE_BOOTS)
+//             .unlockedBy("has_allthemodium_ingot", has(ATMTags.Items.INGOTS_ALLTHEMODIUM))
+//             .save(atm, rk("allthemodium_boots"));
+// 
+//         // ==========================================
+//         // VIBRANIUM
+//         // ==========================================
+// 
+//         ShapedRecipeBuilder.shaped(items, RecipeCategory.TOOLS, ATMItems.VIBRANIUM_PICKAXE.get(), 1)
+//             .pattern("asa").pattern(" r ").pattern(" r ")
+//             .define('a', ATMTags.Items.PLATES_VIBRANIUM).define('r', ATMTags.Items.RODS_VIBRANIUM).define('s', ATMItems.ALLTHEMODIUM_PICKAXE.get())
+//             .unlockedBy("has_vibranium_plate", has(ATMTags.Items.PLATES_VIBRANIUM))
+//             .save(vib, rk("vibranium_pickaxe"));
+// 
+//         ShapedRecipeBuilder.shaped(items, RecipeCategory.TOOLS, ATMItems.VIBRANIUM_AXE.get(), 1)
+//             .pattern("as").pattern("ar").pattern(" r")
+//             .define('a', ATMTags.Items.PLATES_VIBRANIUM).define('r', ATMTags.Items.RODS_VIBRANIUM).define('s', ATMItems.ALLTHEMODIUM_AXE.get())
+//             .unlockedBy("has_vibranium_plate", has(ATMTags.Items.PLATES_VIBRANIUM))
+//             .save(vib, rk("vibranium_axe"));
+// 
+//         ShapedRecipeBuilder.shaped(items, RecipeCategory.TOOLS, ATMItems.VIBRANIUM_SHOVEL.get(), 1)
+//             .pattern(" a ").pattern(" s ").pattern(" r ")
+//             .define('a', ATMTags.Items.PLATES_VIBRANIUM).define('r', ATMTags.Items.RODS_VIBRANIUM).define('s', ATMItems.ALLTHEMODIUM_SHOVEL.get())
+//             .unlockedBy("has_vibranium_plate", has(ATMTags.Items.PLATES_VIBRANIUM))
+//             .save(vib, rk("vibranium_shovel"));
+// 
+//         ShapedRecipeBuilder.shaped(items, RecipeCategory.TOOLS, ATMItems.VIBRANIUM_HOE.get(), 1)
+//             .pattern("as ").pattern(" r ").pattern(" r ")
+//             .define('a', ATMTags.Items.PLATES_VIBRANIUM).define('r', ATMTags.Items.RODS_VIBRANIUM).define('s', ATMItems.ALLTHEMODIUM_HOE.get())
+//             .unlockedBy("has_vibranium_plate", has(ATMTags.Items.PLATES_VIBRANIUM))
+//             .save(vib, rk("vibranium_hoe"));
+// 
+//         ShapedRecipeBuilder.shaped(items, RecipeCategory.COMBAT, ATMItems.VIBRANIUM_SWORD.get(), 1)
+//             .pattern(" a ").pattern(" s ").pattern(" r ")
+//             .define('a', ATMTags.Items.PLATES_VIBRANIUM).define('r', ATMTags.Items.RODS_VIBRANIUM).define('s', ATMItems.ALLTHEMODIUM_SWORD.get())
+//             .unlockedBy("has_vibranium_plate", has(ATMTags.Items.PLATES_VIBRANIUM))
+//             .save(vib, rk("vibranium_sword"));
+// 
+//         ShapedRecipeBuilder.shaped(items, RecipeCategory.COMBAT, ATMItems.VIBRANIUM_HELMET.get(), 1)
+//             .pattern("ana").pattern("aaa")
+//             .define('a', ATMTags.Items.INGOTS_VIBRANIUM).define('n', ATMItems.ALLTHEMODIUM_HELMET.get())
+//             .unlockedBy("has_vibranium_ingot", has(ATMTags.Items.INGOTS_VIBRANIUM))
+//             .save(vib, rk("vibranium_helmet"));
+// 
+//         ShapedRecipeBuilder.shaped(items, RecipeCategory.COMBAT, ATMItems.VIBRANIUM_CHESTPLATE.get(), 1)
+//             .pattern("a a").pattern("ana").pattern("aaa")
+//             .define('a', ATMTags.Items.INGOTS_VIBRANIUM).define('n', ATMItems.ALLTHEMODIUM_CHESTPLATE.get())
+//             .unlockedBy("has_vibranium_ingot", has(ATMTags.Items.INGOTS_VIBRANIUM))
+//             .save(vib, rk("vibranium_chestplate"));
+// 
+//         ShapedRecipeBuilder.shaped(items, RecipeCategory.COMBAT, ATMItems.VIBRANIUM_LEGGINGS.get(), 1)
+//             .pattern("aaa").pattern("ana").pattern("a a")
+//             .define('a', ATMTags.Items.INGOTS_VIBRANIUM).define('n', ATMItems.ALLTHEMODIUM_LEGGINGS.get())
+//             .unlockedBy("has_vibranium_ingot", has(ATMTags.Items.INGOTS_VIBRANIUM))
+//             .save(vib, rk("vibranium_leggings"));
+// 
+//         ShapedRecipeBuilder.shaped(items, RecipeCategory.COMBAT, ATMItems.VIBRANIUM_BOOTS.get(), 1)
+//             .pattern("a a").pattern("ana")
+//             .define('a', ATMTags.Items.INGOTS_VIBRANIUM).define('n', ATMItems.ALLTHEMODIUM_BOOTS.get())
+//             .unlockedBy("has_vibranium_ingot", has(ATMTags.Items.INGOTS_VIBRANIUM))
+//             .save(vib, rk("vibranium_boots"));
+// 
+//         // ==========================================
+//         // UNOBTAINIUM 
+//         // ==========================================
+// 
+//         ShapedRecipeBuilder.shaped(items, RecipeCategory.TOOLS, ATMItems.UNOBTAINIUM_PICKAXE.get(), 1)
+//             .pattern("ara").pattern(" r ").pattern(" r ")
+//             .define('a', ATMTags.Items.PLATES_UNOBTAINIUM).define('r', ATMTags.Items.RODS_UNOBTAINIUM)
+//             .unlockedBy("has_unobtainium_plate", has(ATMTags.Items.PLATES_UNOBTAINIUM))
+//             .save(uno, rk("unobtainium_pickaxe"));
+// 
+//         ShapedRecipeBuilder.shaped(items, RecipeCategory.TOOLS, ATMItems.UNOBTAINIUM_AXE.get(), 1)
+//             .pattern("aa").pattern("ar").pattern(" r")
+//             .define('a', ATMTags.Items.PLATES_UNOBTAINIUM).define('r', ATMTags.Items.RODS_UNOBTAINIUM)
+//             .unlockedBy("has_unobtainium_plate", has(ATMTags.Items.PLATES_UNOBTAINIUM))
+//             .save(uno, rk("unobtainium_axe"));
+// 
+//         ShapedRecipeBuilder.shaped(items, RecipeCategory.TOOLS, ATMItems.UNOBTAINIUM_SHOVEL.get(), 1)
+//             .pattern(" a ").pattern(" r ").pattern(" r ")
+//             .define('a', ATMTags.Items.PLATES_UNOBTAINIUM).define('r', ATMTags.Items.RODS_UNOBTAINIUM)
+//             .unlockedBy("has_unobtainium_plate", has(ATMTags.Items.PLATES_UNOBTAINIUM))
+//             .save(uno, rk("unobtainium_shovel"));
+// 
+//         ShapedRecipeBuilder.shaped(items, RecipeCategory.TOOLS, ATMItems.UNOBTAINIUM_HOE.get(), 1)
+//             .pattern("aa ").pattern(" r ").pattern(" r ")
+//             .define('a', ATMTags.Items.PLATES_UNOBTAINIUM).define('r', ATMTags.Items.RODS_UNOBTAINIUM)
+//             .unlockedBy("has_unobtainium_plate", has(ATMTags.Items.PLATES_UNOBTAINIUM))
+//             .save(uno, rk("unobtainium_hoe"));
+// 
+//         ShapedRecipeBuilder.shaped(items, RecipeCategory.COMBAT, ATMItems.UNOBTAINIUM_SWORD.get(), 1)
+//             .pattern(" a ").pattern(" a ").pattern(" r ")
+//             .define('a', ATMTags.Items.PLATES_UNOBTAINIUM).define('r', ATMTags.Items.RODS_UNOBTAINIUM)
+//             .unlockedBy("has_unobtainium_plate", has(ATMTags.Items.PLATES_UNOBTAINIUM))
+//             .save(uno, rk("unobtainium_sword"));
+// 
+//         ShapedRecipeBuilder.shaped(items, RecipeCategory.COMBAT, ATMItems.UNOBTAINIUM_HELMET.get(), 1)
+//             .pattern("aaa").pattern("ana")
+//             .define('a', ATMTags.Items.INGOTS_UNOBTAINIUM).define('n', Items.NETHERITE_INGOT)
+//             .unlockedBy("has_unobtainium_ingot", has(ATMTags.Items.INGOTS_UNOBTAINIUM))
+//             .save(uno, rk("unobtainium_helmet"));
+// 
+//         ShapedRecipeBuilder.shaped(items, RecipeCategory.COMBAT, ATMItems.UNOBTAINIUM_CHESTPLATE.get(), 1)
+//             .pattern("a a").pattern("ana").pattern("aaa")
+//             .define('a', ATMTags.Items.INGOTS_UNOBTAINIUM).define('n', Items.NETHERITE_INGOT)
+//             .unlockedBy("has_unobtainium_ingot", has(ATMTags.Items.INGOTS_UNOBTAINIUM))
+//             .save(uno, rk("unobtainium_chestplate"));
+// 
+//         ShapedRecipeBuilder.shaped(items, RecipeCategory.COMBAT, ATMItems.UNOBTAINIUM_LEGGINGS.get(), 1)
+//             .pattern("aaa").pattern("ana").pattern("a a")
+//             .define('a', ATMTags.Items.INGOTS_UNOBTAINIUM).define('n', Items.NETHERITE_INGOT)
+//             .unlockedBy("has_unobtainium_ingot", has(ATMTags.Items.INGOTS_UNOBTAINIUM))
+//             .save(uno, rk("unobtainium_leggings"));
+// 
+//         ShapedRecipeBuilder.shaped(items, RecipeCategory.COMBAT, ATMItems.UNOBTAINIUM_BOOTS.get(), 1)
+//             .pattern("a a").pattern("ana")
+//             .define('a', ATMTags.Items.INGOTS_UNOBTAINIUM).define('n', Items.NETHERITE_INGOT)
+//             .unlockedBy("has_unobtainium_ingot", has(ATMTags.Items.INGOTS_UNOBTAINIUM))
+//             .save(uno, rk("unobtainium_boots"));
     }
 
     // =============================================

@@ -13,7 +13,6 @@ import net.neoforged.fml.common.Mod;
 import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.bus.api.IEventBus;
 
-import net.minecraft.util.Tuple;
 import net.minecraft.network.protocol.common.custom.CustomPacketPayload;
 import net.minecraft.network.codec.StreamCodec;
 import net.minecraft.network.FriendlyByteBuf;
@@ -84,20 +83,32 @@ public class NoNetheriteTemplate {
 
     private static final Collection<Tuple<Runnable, Integer>> workQueue = new ConcurrentLinkedQueue<>();
 
-    public static void queueServerWork(int tick, Runnable action) {
-        if (Thread.currentThread().getThreadGroup() == SidedThreadGroups.SERVER)
-            workQueue.add(new Tuple<>(action, tick));
-    }
+	private static final class ScheduledWork {
+		private final Runnable action;
+		private int ticks;
 
-    @SubscribeEvent
-    public void tick(ServerTickEvent.Post event) {
-        List<Tuple<Runnable, Integer>> actions = new ArrayList<>();
-        workQueue.forEach(work -> {
-            work.setB(work.getB() - 1);
-            if (work.getB() == 0)
-                actions.add(work);
-        });
-        actions.forEach(e -> e.getA().run());
-        workQueue.removeAll(actions);
-    }
+		private ScheduledWork(Runnable action, int ticks) {
+			this.action = action;
+			this.ticks = ticks;
+		}
+	}
+
+	private static final Collection<ScheduledWork> workQueue = new ConcurrentLinkedQueue<>();
+
+	public static void queueServerWork(int tick, Runnable action) {
+		if (Thread.currentThread().getThreadGroup() == SidedThreadGroups.SERVER)
+			workQueue.add(new ScheduledWork(action, tick));
+	}
+
+	@SubscribeEvent
+	public void tick(ServerTickEvent.Post event) {
+		List<ScheduledWork> actions = new ArrayList<>();
+		workQueue.forEach(work -> {
+			work.ticks--;
+			if (work.ticks == 0)
+				actions.add(work);
+		});
+		actions.forEach(e -> e.action.run());
+		workQueue.removeAll(actions);
+	}
 }

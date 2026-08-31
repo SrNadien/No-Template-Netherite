@@ -2,7 +2,7 @@ This mod addresses the issue introduced in Minecraft 1.20.x and 1.21.x where the
 
 Versions
 __________________________
-v17 ??? ❎
+v17 26.2 ❎
 
 V16 26.1.2✅
 
